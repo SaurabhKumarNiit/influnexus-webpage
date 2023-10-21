@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { EditingDataService } from '../services/editing-data.service';
@@ -30,7 +30,7 @@ export class HeaderComponent {
   public searchTerm !: string;
 
   // currentGame: string ="";
-  constructor(private router:Router,private profileService:EditingDataService ) { 
+  constructor(private router:Router,private profileService:EditingDataService,private renderer: Renderer2 ) { 
     // this.currentGame = JSON.parse(localStorage.getItem('currentGame')); 
   }
 
@@ -94,6 +94,23 @@ logIn(){
       }
     })
   }
+  
+  @ViewChild('myVideo') myVideoRef!: ElementRef;
 
 
+  ngAfterViewInit() {
+    this.setupVideo();
+  }
+
+  private setupVideo() {
+    const video: HTMLVideoElement = this.myVideoRef.nativeElement;
+    this.renderer.listen(video, 'ended', () => this.restartVideo(video));
+    video.muted = true;
+    video.play();
+  }
+
+  private restartVideo(video: HTMLVideoElement) {
+    video.currentTime = 0;
+    video.play();
+  }
 }
