@@ -12,25 +12,21 @@
                 </svg>
               </label>
               <ul class="links">
-                <li><a href="home" class="active">Home</a></li>
-                <li><a href="video-request" >Video-Request</a></li>
-                <!-- <li><a href="faq" >FAQ</a></li> -->
-                <li><a href="feedback">Feedback</a></li>
+                <!-- <li><a href="home" class="active">Home</a></li> -->
+                <li><button routerLink="/home" class="active">Home</button></li>
+                <li><button routerLink="/video-request" >Video-Request</button></li>
+                <li><button routerLink="/feedback">Feedback</button></li>
                 <!-- <li><a href="add-thumbnail">New-Video</a></li> -->
-                <li><a href="login" class="signin" *ngIf="!user">Sign In</a></li>
+                <!-- <li><a href="/login" >Sign In</a></li> -->
+                <li><button routerLink="/login" class="signin" *ngIf="!user">Sign In</button></li>
 
-                <li><a *ngIf="user" (click)="logOut()"  >Log Out</a></li>
+                <li><button *ngIf="user" (click)="logOut()" >Sign Out </button></li>
                 <li  class="myDIV" >
-                 
                   <img class="rounded-circle"  [src]="urllink" alt="{{user.photoUrl}}" style="height: 50px; width: 50px;" id="photo">
                   <div class="hide">{{user.name}}</div>
-                </li>
-
-              
-                  
+                </li>          
               </ul>
-            </nav>
-        
+            </nav>    
       </div>
   </div>
 </div>
@@ -49,7 +45,7 @@
 
         <div ><p class="head">Crafting Your Vision</p> </div>
         <div>
-            <a href="login" class="explore" >Explore</a>
+            <button routerLink="/login" class="explore">Explore</button>
         </div>
     </div>
   </div>

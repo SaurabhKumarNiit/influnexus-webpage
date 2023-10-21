@@ -1,1 +1,60 @@
-<p>login-interface works!</p>
+<app-navbar></app-navbar>
+<body>
+
+  <div class="mainpage">
+    <div class="form-wrapper">
+      <h2>Sign In</h2>
+      <form class="login-form" [formGroup]="loginForm">
+        <div class="form-control">
+          <input
+            type="email"
+            required
+            formControlName="email"
+            placeholder="Email"
+          />
+        </div>
+        <br />
+        <div class="form-control">
+          <input
+            type="password"
+            required
+            formControlName="password"
+            placeholder="Password"
+          />
+        </div>
+
+        <button class="button" type="submit" (click)="onSubmit()">
+          Sign In
+        </button>
+
+        <h5>--- Or Continue With ---</h5>
+
+        <div class="gbutton">
+          <!-- <button  (click)="verifydata()">
+                Check
+                 </button> -->
+          <asl-google-signin-button
+            *ngIf="!user"
+            shape="rectangular"
+            size="large"
+            type="standard"
+            width="370px"
+            title="signin_with"
+          ></asl-google-signin-button>
+        </div>
+        <button
+          class="loginBtn loginBtn--facebook"
+          *ngIf="!user"
+          (click)="signInWithFB()"
+        >
+          Login with Facebook
+        </button>
+      </form>
+      <p>New to INFLUNEXUS ? <button routerLink="/register" style="border-radius: 5px; padding: 2px; background: transparent; color: white;">Sign up now</button></p>
+      <small>
+        This page is protected by Google reCAPTCHA.
+        <a href="#">Learn More</a>
+      </small>
+    </div>
+  </div>
+</body>

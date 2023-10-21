@@ -106,7 +106,8 @@
     gap: 15px;
   }
   
-  .navbar .links a {
+  .navbar .links button {
+    justify-content: center;
     font-weight: 700;
     text-decoration: none;
     color:  white;
@@ -115,10 +116,11 @@
     width: 140px;
     font-weight: bold;
     font-size: 15px;
-   /* background-color: rgb(216, 216, 136); */
+   border-radius: 10px;
+   background-color: rgba(0,0,0,0.75);
   }
   
-  .navbar .links a:hover {
+  .navbar .links button:hover {
     color: #47b2e4;
   }
   .buttons .join {
@@ -237,7 +239,7 @@
     color: black;
   }
   
-  .topnav a.active {
+  .topnav button.active {
     background-color: #04aa6d;
     color: white;
   }
@@ -265,7 +267,7 @@
       align-items: center;
     }
   
-    #menu.topnav a {
+    #menu.topnav button {
     
       margin-bottom: 8px;
       margin-left: 0; /* Adjust margin for smaller screens */

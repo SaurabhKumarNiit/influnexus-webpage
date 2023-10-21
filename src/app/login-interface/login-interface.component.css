@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta&family=Oswald:wght@500&family=Roboto:wght@100;300;400&display=swap");
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mukta", sans-serif;
+}
+.mainpage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-position: center;
+}
+.form-wrapper {
+  width: 430px;
+  padding: 30px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.75);
+}
+.form-wrapper h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+.form-wrapper form {
+  margin: 20px 0 55px;
+}
+@media (min-width: 1025px) and (max-width: 1900px) {
+  .form-wrapper {
+    position: absolute;
+    margin-top: 60px;
+  }
+  .form-control label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    color: #8c8c8c;
+    pointer-events: none;
+    font-size: 1rem;
+    transform: translateY(-50%);
+    transition: all 0.1s ease;
+  }
+  form .form-control {
+    position: relative;
+    height: 50px;
+  }
+  .loginBtn {
+    position: relative;
+  }
+  .loginBtn:before {
+    left: 0%;
+    position: absolute;
+  }
+  .form-control input {
+    height: 100%;
+    width: 100%;
+    background: #333;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1 rem;
+    border-radius: 4px;
+    padding: 0 20px;
+  }
+  .form-control input:is(:focus, :valid) {
+    padding: 16px 20px 0;
+    background: #444;
+  }
+  .form-control input:is(:focus, :valid) ~ label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+  }
+}
+form .button {
+  width: 100%;
+  height: 50px;
+  padding: 10px 0;
+  font-size: 1 rem;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 4px;
+  background: #e50914;
+  margin: 25px 0 10px;
+  transition: 0.1s ease;
+}
+.gbutton {
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+form .button:hover {
+  background: #c40812;
+}
+.form-wrapper :where(label, p, small, a) {
+  color: #b3b3b3;
+}
+.form-wrapper p a {
+  color: #fff;
+}
+.form-wrapper small {
+  display: block;
+  margin-top: 15px;
+}
+.form-wrapper small a {
+  color: #0071eb;
+}
+.form-wrapper a {
+  text-decoration: none;
+}
+.form-wrapper a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 740px) {
+  body::before {
+    display: none;
+  }
+
+  .form-wrapper {
+    top: 46%;
+  }
+  .form-wrapper form {
+    margin: 25 px 0 40px;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .form-wrapper {
+    margin-top: 50px;
+  }
+  .loginBtn:before {
+    left: 13%;
+  }
+  .form-control input {
+    height: 50px;
+    width: 100%;
+    background: #333;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1 rem;
+    border-radius: 4px;
+    padding: 0 20px;
+  }
+  .form-control input:is(:focus, :valid) {
+    background: #444;
+  }
+  .form-control input:is(:focus, :valid) ~ label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+  }
+}
+.loginBtn {
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  margin-top: 10px;
+  border: none;
+  text-align: center;
+  justify-content: center;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn--facebook {
+  background-color: #4c69ba;
+  background-image: linear-gradient(#4c69ba, #3b55a0);
+  text-shadow: 0 -1px 0 #354c8c;
+}
+.loginBtn--facebook:before {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png")
+    6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5b7bd5;
+  background-image: linear-gradient(#5b7bd5, #4864b1);
+}
+h5 {
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  max-width: 600px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+ 
