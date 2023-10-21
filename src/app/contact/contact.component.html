@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<div [@fadeIn]>
+<div class="container">
+    <div class="label-container">
+      <h2 class="left-label">Contact </h2>
+      <h2 class="right-label">-Us</h2>
+    </div>
+    <form (ngSubmit)="submitForm()" class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required [(ngModel)]="formData.name">
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required [(ngModel)]="formData.email">
+  
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required [(ngModel)]="formData.message"></textarea>
+  
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+  
+</div>

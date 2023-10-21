@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<body (window:scroll)="startAnimations()">
+    <header [@fadeIn]="headerState">
+      <h1 class="main-heading">About Influnexus Video Editing</h1>
+    </header>
+  
+    <section class="about-content">
+      <div class="intro">
+        <p>Welcome to Influnexus Video Editing, where creativity meets technology. Our mission is to empower content
+          creators with powerful and intuitive video editing tools.</p>
+      </div>
+  
+      <div class="features">
+        <h2>Key Features</h2>
+        <ul>
+          <li>Advanced Video Editing</li>
+          <li>Real-time Collaboration</li>
+          <li>Customizable Effects and Transitions</li>
+          <li>Mobile Editing Support</li>
+          <li>High-Quality Export Options</li>
+        </ul>
+      </div>
+    </section>
+  
+    <section class="team">
+      <h2 [@slideIn]="teamHeaderState">Meet the Team</h2>
+  
+      <div class="team-member" *ngFor="let member of teamMembers" [@stagger]="{ value: 'slideIn', params: { delay: '100ms' } }">
+        <img src="{{ member.image }}" alt="{{ member.name }}" width="400px">
+        <div class="info">
+          <h3>{{ member.name }}</h3>
+          <p>{{ member.role }}</p>
+        </div>
+       
+      </div>
+    </section>
+  </body>
+  <br><br>
+  <app-footer></app-footer>

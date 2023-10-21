@@ -1,0 +1,160 @@
+/* contact-form.component.css */
+
+.container {
+    max-width: 600px;
+    margin-top: 80px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  h2 {
+    color: #333;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .label-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .label-container .left-label,
+  .label-container .right-label {
+    opacity: 0;
+    transform: translateX(0);
+    animation: slideIn 1s forwards, fadeIn 1s forwards;
+  }
+  
+  .label-container .left-label {
+    animation-delay: 1.2s;
+  }
+  .label-container .right-label {
+    animation-delay: 1.8s; 
+  }
+  
+  .contact-form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add some creative styles */
+  
+  .container {
+    background-color: #f9f9f9;
+  }
+  
+  .contact-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  label::after {
+    content: '*';
+    color: #f00;
+    margin-left: 5px;
+    animation: bounce 1s infinite alternate;
+  }
+  
+  input,
+  textarea {
+    background-color: #f5f5f5;
+  }
+  
+  button {
+    background-color: #ff5722;
+  }
+  
+  button:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 600px) {
+    .contact-form {
+      grid-template-columns: 1fr;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-5px);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  

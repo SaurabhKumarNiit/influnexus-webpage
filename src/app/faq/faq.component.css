@@ -1,3 +1,64 @@
+
+section{
+    text-align: center;
+    margin-top: 130px;
+}
+h1{
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px rgb(138, 237, 84);
+}
+.accordion{
+   margin-top: 30px;
+  
+    width: 98%;
+
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #e3edf7;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                6px 6px 10px -1px rgba(225, 255, 255, 0.7);
+
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+.accordion label::before{
+    content: '+';
+    margin-right: 10px;
+    font-size:24px ;
+    font-weight: 600;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    color: #555;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 400px;
+    padding:10px 10px 20px ; 
+}
+.accordion input[type="radio"]:checked + label::before{
+   content: '-';
+}
+
+
+
+
 .navbar {
     display: flex;
     align-items: center;
@@ -8,39 +69,36 @@
   }
   
   .navbar .logo a {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     text-decoration: none;
     color: yellow;
     position: absolute;
     transform: translate(-50%,-50%);
-    left: 5%;
-    /* font-size: 150px; */
+    left: 10%;
     font-family: 'Oswald', sans-serif;
-    /* font-family: 'Times New Roman',serif; */
     letter-spacing: 2px;
     font-weight: bold;
-    background: rgba(0,0,0,0.75);
-    transform: translate(-50%,-50%);
+    background-color:  rgba(0,0,0,0.75);
     
   }
   
   .navbar .links {
     display: flex;
-    align-items:center;
+    align-items: center;
     list-style: none;
-    gap: 15px;
+    gap: 35px;
   }
   
   .navbar .links a {
     font-weight: 500;
     text-decoration: none;
-    color:  white;
+    color: rgba(0,0,0,0.75) ;
     padding: 10px 0;
     transition: 0.2s ease;
-    width: 140px;
+    width: 150px;
     font-weight: bold;
     font-size: 14px;
-   background-color: rgba(0,0,0,0.75);
+    background-color: white;
   }
   
   .navbar .links a:hover {
@@ -118,15 +176,13 @@
   
     .navbar #menu-toggle:checked ~ .links {
       left: 0;
+   
     }
   
     .navbar #hamburger-btn {
       display: block;
     }
-  
-    /* .header .buttons {
-      display: none;
-    } */
+
   
     .hero-section .hero {
       max-width: 100%;
@@ -138,20 +194,6 @@
     }
   }
   
-  #text {
-    position: relative;
-    left: -100%;
-    animation: anim3 1s forwards 2s;
-  }
-  
-  @keyframes anim3 {
-    from {
-      left: -100%;
-    }
-    to {
-      left: 0%;
-    }
-  }
   
   #box3 {
     overflow: hidden;
@@ -185,7 +227,6 @@
   
   .topnav {
     overflow: hidden;
-    /* background-color: darkgrey; */
   }
   
   .topnav a {
@@ -198,11 +239,10 @@
     font-size: 13px;
     border-radius: 20px;
     margin-top: 10px;
-    /* width: %; */
   }
   
   .topnav a:hover {
-    /* background-color: grey; */
+    background-color: grey;
     color: black;
   }
   
@@ -220,57 +260,45 @@
       font-size: 3em; 
       top: 20%;
     }
-    /* .imgtab {
-      margin-top: 10px;
-      height: 50px;
-      width: 50px;
-      display: block;
-    } */
+    h1{
+        font-size: 20px;
+    }
+  
     .navbar .logo a{
       left: 20%;
     }
+  
     #menu.topnav {
       flex-direction: column;
       align-items: center;
     }
   
     #menu.topnav a {
-    
       margin-bottom: 8px;
-      margin-left: 0; /* Adjust margin for smaller screens */
+      margin-left: 0; 
     }
-    .content .head{
-      text-align: center;
-      font-size: 30px;
-     margin-top: 400px;
-    }
+    small{
+     font-size: 13px;
+    display: block;
+    margin-left: 5px;
+  }
   
-    button{
-      width: 100px;
-      padding: 8px;
-    margin-left: 48px;
-      text-align: center;
-      border-radius: 25px;
-      color: black;
-      border: 2px;
-      font-size: 15px;
-      cursor: pointer;
-      font-weight: 600;
-      margin-top: 30px;
-     
-    }
+  form .fields .input-field{
+    width: 100%;
+ 
+  }
+  section{
+    margin-top: 20%;
+   
+  }
+  .container header::before{
+    height: 1px;
+  width: 0px;
   
   }
-
-  .hide {
-    display: none;
+  .container form{
+    position: inherit;
   }
-      
-  .rounded-circle:hover + .hide {
-    display:inline;
-    position: absolute;
-    color: yellow;
-    font-size: 13px;
-    transition: 0.3s ease;
-    font-family: 'Allura', cursive;
+  
   }
+  

@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Roboto',sans-serif;
+}
+section{
+  margin-top: 3%;
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+body::before{
+    content: " ";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-position: center;
+}
+.container{
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background: rgba(0,0,0,0.75);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.container header{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+.container header::before{
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -2px;
+   height: 3px;
+   width: 197px;
+   border-radius: 8px;
+   background-color: #e50914;
+}
+.container form{
+    margin-top: 16px;
+    min-height: 490px;
+}
+
+@media (min-width: 1025px) and (max-width: 1900px){
+
+  .container{
+    position: relative;
+  }
+  .container header{
+    position: relative;
+  }
+  .container form{
+    position: relative;
+  }
+  small{
+    position: absolute;
+     margin-top: 56px;
+    margin-left: 17px;
+
+}
+
+}
+
+.container form .details{
+    margin-top: 30px;
+}
+.container form .details.ID{
+    margin-top: 10px;
+}
+.container form .title{
+    display: block;
+    margin-bottom: 8px;
+   font-size: 16px;
+   font-weight: 500;
+   margin: 6px 0;
+   color: #fff;
+    
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field label{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff ;
+}
+.input-field input{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+ form button{
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1 rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    background: rgb(208, 12, 12);
+    margin: 25px 0 10px;
+    transition: 0.1s ease;
+}
+form button:hover{
+    background:  rgb(105, 5, 5);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+.navbar .logo a {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: yellow;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 10%;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  font-weight: bold;
+  background-color:  rgba(0,0,0,0.75);
+  
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar .links a {
+  font-weight: 500;
+  text-decoration: none;
+  color: rgba(0,0,0,0.75) ;
+  padding: 10px 0;
+  transition: 0.2s ease;
+  width: 150px;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: white;
+}
+
+.navbar .links a:hover {
+  color: #47b2e4;
+}
+.buttons .join {
+  background-color: #47b2e4;
+} 
+#menu-toggle {
+  display: none;
+}
+#hamburger-btn {
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  order: 1;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar .logo a {
+    font-size: 1.5rem;
+  }
+  .navbar .logo{
+    width: 50px;
+  }
+
+  .links {
+    position: fixed;
+    left: -100%;
+    top: 75px;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    background: #175d69;
+    flex-direction: column;
+    transition: 0.3s ease;
+  }
+
+  .navbar #menu-toggle:checked ~ .links {
+    left: 0;
+ 
+  }
+  .navbar #hamburger-btn {
+    display: block;
+  }
+  .hero-section .hero {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-section img {
+    display: none;
+  }
+}
+
+#text {
+  position: relative;
+  left: -100%;
+  animation: anim3 1s forwards 2s;
+}
+
+@keyframes anim3 {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+#box3 {
+  overflow: hidden;
+}
+
+#container {
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  animation: anim4 1s forwards 1.5s;
+}
+
+#logo {
+  float: left;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+#logo img {
+  width: 50px;
+}
+
+@keyframes anim4 {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #1a1818;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.topnav a:hover {
+  background-color: grey;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar .logo a{
+    left: 20%;
+  }
+
+  #menu.topnav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #menu.topnav a {
+    margin-bottom: 8px;
+    margin-left: 0;
+  }
+  small{
+   font-size: 13px;
+  display: block;
+  margin-left: 5px;
+}
+
+form .fields .input-field{
+  width: 100%;
+}
+section{
+  margin-top: 20%;
+ 
+}
+.container header::before{
+  height: 1px;
+width: 0px;
+
+}
+.container form{
+  position: inherit;
+}
+
+}

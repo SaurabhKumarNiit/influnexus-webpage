@@ -1,1 +1,51 @@
-<p>navbar works!</p>
+<div id="box3">
+    <div id="container">
+      <div id="menu" class="topnav">
+        <nav class="navbar">
+          <h2 class="logo"><a href="#">INFLUNEXUS</a></h2>
+  
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" id="hamburger-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M3 12h18M3 6h18M3 18h18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </label>
+          <ul class="links">
+            <li><a href="home" class="active">Home</a></li>
+            <li><a href="video-request">Video-Request</a></li>
+            <!-- <li><a href="faq" >FAQ</a></li> -->
+            <li><a href="feedback">Feedback</a></li>
+            <!-- <li><a href="add-thumbnail">New-Video</a></li> -->
+            <li><a href="login" class="signin" *ngIf="!user">Sign In</a></li>
+  
+            <li>
+              <a *ngIf="user" (click)="logOut()" style="margin-left: -20px"
+                >Log Out</a
+              >
+            </li>
+            <li class="myDIV">
+              <img
+                class="rounded-circle"
+                [src]="urllink"
+                alt="{{ user.photoUrl }}"
+                style="height: 50px; width: 50px"
+                id="photo"
+              />
+              <div class="hide">{{ user.name }}</div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  
