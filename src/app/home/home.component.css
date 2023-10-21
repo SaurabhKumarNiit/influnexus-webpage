@@ -91,7 +91,7 @@ h4{
 
 /* Hero Carousel */
 #template-mo-jassa-hero-carousel {
-  margin-top: 725px;
+  margin-top: 500px;
   background: rgba(219, 231, 239, 0.75) !important;
 }
 /* Accordion */
@@ -241,6 +241,7 @@ h4{
   #templatemo_main_nav .navbar-nav {
     max-width: 450px;
   }
+
 }
 
 /* Large devices (desktops, 992px and up)*/
@@ -265,4 +266,10 @@ h4{
 
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
+}
+@media screen and (max-width: 767px){
+  #template-mo-jassa-hero-carousel {
+    margin-top: 312px;
+  
+  }
 }
