@@ -8,7 +8,9 @@
     background-position: center;
     background-size: center;
   }
-  
+  .headbar{
+    background-color: rgba(0,0,0,0.75);
+  }
   .content{
     width: 100%;
     color: white;
@@ -78,11 +80,11 @@
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 15px;
+    padding: 10px 7px;
   }
   
   .navbar .logo a {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     text-decoration: none;
     color: yellow;
     position: absolute;
@@ -91,7 +93,7 @@
     font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;
     font-weight: bold;
-    background: rgba(0,0,0,0.75);
+    margin-top: -3px;
     transform: translate(-50%,-50%);
     
   }
@@ -104,23 +106,20 @@
   }
   
   .navbar .links a {
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
     color:  white;
-    padding: 10px 0;
+    padding: 5px 0;
     transition: 0.2s ease;
     width: 140px;
     font-weight: bold;
-    font-size: 14px;
-   background-color: rgba(0,0,0,0.75);
+    font-size: 15px;
+   /* background-color: rgb(216, 216, 136); */
   }
   
   .navbar .links a:hover {
     color: #47b2e4;
   }
-  
-  
-  
   .buttons .join {
     background-color: #47b2e4;
   } 
@@ -136,6 +135,7 @@
     cursor: pointer;
     display: none;
     order: 1;
+    margin-top: -6px;
   }
   
   @media screen and (max-width: 1023px) {
@@ -294,7 +294,6 @@
     }
   
   }
-
   .hide {
     display: none;
   }
@@ -306,4 +305,17 @@
     font-size: 13px;
     transition: 0.3s ease;
     font-family: 'Allura', cursive;
+  }
+
+  @media screen and (max-width: 767px){
+    video {
+      width: 100%; /* Make the video fill the container width */
+      height: 100%; /* Make the video fill the container height */
+      object-fit: cover; /* Center and maintain aspect ratio */
+    }
+
+    .navbar{
+      padding: 20px 10px;
+    }
+
   }

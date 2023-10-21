@@ -1,48 +1,46 @@
 
+<div id="box3">
+  <div id="container"  class="headbar">
+      <div id="menu" class="topnav">
+            <nav class="navbar">
+              <div class="logo"><a href="#">INFLUNEXUS</a></div>
+              
+              <input type="checkbox" id="menu-toggle" />
+              <label for="menu-toggle" id="hamburger-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                  <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </label>
+              <ul class="links">
+                <li><a href="home" class="active">Home</a></li>
+                <li><a href="video-request" >Video-Request</a></li>
+                <!-- <li><a href="faq" >FAQ</a></li> -->
+                <li><a href="feedback">Feedback</a></li>
+                <!-- <li><a href="add-thumbnail">New-Video</a></li> -->
+                <li><a href="login" class="signin" *ngIf="!user">Sign In</a></li>
+
+                <li><a *ngIf="user" (click)="logOut()"  >Log Out</a></li>
+                <li  class="myDIV" >
+                 
+                  <img class="rounded-circle"  [src]="urllink" alt="{{user.photoUrl}}" style="height: 50px; width: 50px;" id="photo">
+                  <div class="hide">{{user.name}}</div>
+                </li>
+
+              
+                  
+              </ul>
+            </nav>
+        
+      </div>
+  </div>
+</div>
 
 <div class="banner">
-
-    <div id="box3">
-        <div id="container">
-      
-            <div id="menu" class="topnav">
-                  <nav class="navbar">
-                    <h2 class="logo"><a href="#">INFLUNEXUS</a></h2>
-                    
-                    <input type="checkbox" id="menu-toggle" />
-                    <label for="menu-toggle" id="hamburger-btn">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                      </svg>
-                    </label>
-                    <ul class="links">
-                      <li><a href="home" class="active">Home</a></li>
-                      <li><a href="video-request" >Video-Request</a></li>
-                      <!-- <li><a href="faq" >FAQ</a></li> -->
-                      <li><a href="feedback">Feedback</a></li>
-                      <!-- <li><a href="add-thumbnail">New-Video</a></li> -->
-                      <li><a href="login" class="signin" *ngIf="!user">Sign In</a></li>
-
-                      <li><a *ngIf="user" (click)="logOut()"  >Log Out</a></li>
-                      <li  class="myDIV" >
-                       
-                        <img class="rounded-circle"  [src]="urllink" alt="{{user.photoUrl}}" style="height: 50px; width: 50px;" id="photo">
-                        <div class="hide">{{user.name}}</div>
-                      </li>
-
-                    
-                        
-                    </ul>
-                  </nav>
-              
-            </div>
-        </div>
-      </div>
   
         <!-- <source src="https://cdn.pixabay.com/vimeo/246463976/atoms-13232.mp4?width=640&hash=4c8703a3f34b289318ae2077bcae4008b1d886da" type="video/mp4" > -->
   
         <video #myVideo loop muted playsinline preload="metadata">
-          <source src="assets/prography.mp4" type="video/mp4">
+          <source src="assets/Tech_Triangle.mp4" type="video/mp4">
       </video>
   
     <div class="content">
