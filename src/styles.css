@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background: url("https://cdn.wallpapersafari.com/73/33/P9b2gR.jpg");
+
+     /* background-image: radial-gradient( 
+        circle farthest-corner at 10% 20%,  rgb(160, 207, 204) 0%, rgb(118, 159, 154) 90% ); */
+}
