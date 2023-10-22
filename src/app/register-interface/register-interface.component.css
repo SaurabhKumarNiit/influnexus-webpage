@@ -15,13 +15,14 @@ body::before{
   content: " ";
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+
     background-position: center;
 }
 
 .form-wrapper{
+    height: 570px;
     margin-top: 60px;
-    width: 510px;
+    width: 500px;
     padding: 60px;
     border-radius: 4px;
     background: rgba(0,0,0,0.75);
@@ -118,23 +119,14 @@ form .form-help:where(lable, a){
     body::before{
         display:none;
     }
-    nav,.form-wrapper{
-        padding: 20px;
-    }
     nav a img{
         width: 140px;
     }
     
     .form-wrapper{
-        margin-right: 30px;
+        margin-right: -1px;
     }
     .form-wrapper form{
         margin: 25 px 0 40px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .form-wrapper {
-        width: 430px;
     }
 }
