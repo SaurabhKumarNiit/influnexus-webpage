@@ -126,7 +126,6 @@ form .form-help:where(lable, a){
     }
     
     .form-wrapper{
-        width: 440px;
         margin-right: 30px;
     }
     .form-wrapper form{
@@ -134,3 +133,8 @@ form .form-help:where(lable, a){
     }
 }
 
+@media screen and (max-width: 767px) {
+    .form-wrapper {
+        width: 430px;
+    }
+}
