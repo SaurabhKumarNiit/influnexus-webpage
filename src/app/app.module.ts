@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -51,7 +53,9 @@ import {  GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    GoogleSigninButtonModule
+    GoogleSigninButtonModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },

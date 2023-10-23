@@ -7,7 +7,7 @@
 .mainpage {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+ margin-top: 100px;
   justify-content: center;
 }
 body::before {
@@ -19,6 +19,7 @@ body::before {
 }
 .form-wrapper {
   width: 430px;
+  height: 600px;
   padding: 30px;
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.75);
@@ -32,8 +33,8 @@ body::before {
 }
 @media (min-width: 1025px) and (max-width: 1900px) {
   .form-wrapper {
-    position: absolute;
-    margin-top: 60px;
+    /* position: absolute;
+    margin-top: 60px; */
   }
   .form-control label {
     position: absolute;
@@ -132,9 +133,9 @@ form .button:hover {
 
 
 @media screen and (max-width: 767px) {
-  .form-wrapper {
+  /* .form-wrapper {
     margin-top: 50px;
-  }
+  } */
   .loginBtn:before {
     left: 13%;
   }

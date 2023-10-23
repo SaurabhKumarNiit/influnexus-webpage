@@ -8,9 +8,10 @@
 }
 
 section {
+  background: rgba(46, 97, 142, 0.874);
   position: relative;
   width: 100%;
-  min-height: 50vh;
+  min-height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,8 +21,8 @@ section {
 
 .swiper {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .swiper-wrapper{
@@ -43,7 +44,6 @@ section {
   width: 300px;
   height: 400px;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -156,4 +156,11 @@ section {
 .swiper-3d .swiper-slide-shadow-left,
 .swiper-3d .swiper-slide-shadow-right {
   background-image: none;
+}
+@media screen and (max-width: 767px) {
+
+  .swiper-slide {
+    width: 200px;
+    height: 300px;
+  }
 }
