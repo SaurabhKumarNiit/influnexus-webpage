@@ -50,6 +50,7 @@ export class LoginInterfaceComponent implements  OnInit {
   loginUser: User = { id: '', name:'', email:'',photoUrl:''};
  
   signInWithFB(): void {
+    
     this.socialService.signIn(FacebookLoginProvider.PROVIDER_ID);
 
     // user.response.picture.data.url
@@ -73,7 +74,7 @@ export class LoginInterfaceComponent implements  OnInit {
 
           Swal.fire({
             title:
-              'You are SuccessFull Log In To Google',
+              'You are SuccessFully Login',
             showClass: {
               popup: 'animate__animated animate__fadeInDown',
             },

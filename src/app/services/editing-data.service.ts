@@ -10,39 +10,39 @@ export class EditingDataService {
 
   data: any;
 
-  baseurl = 'https://api.themoviedb.org/3';
+  baseurl = 'https://hardy-drawer-production.up.railway.app';
   apikey = '08cc33bd5ae3a747598ce2ad84376e66';
 
   getVedioRequestDatav(): Observable<any> {
-    return this.http.get(
-      `${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=35`
+    return this.http.get<any>(
+      `${this.baseurl}/videoRequestData`
     );
   }
 
   getVedioRequestData(): Observable<any> {
-    return this.http.get<any>('http://localhost:1001/videoRequestData');
+    return this.http.get<any>(`${this.baseurl}/videoRequestData`);
   }
 
   getThumbnailData(): Observable<any> {
-    return this.http.get<any>('http://localhost:1001/imgData');
+    return this.http.get<any>(`${this.baseurl}/imgData`);
   }
 
   registerCustomer(data: any) {
     console.log(data);
-    return this.http.post<any>('http://localhost:1001/userRegister', data);
+    return this.http.post<any>(`${this.baseurl}/userRegister`, data);
   }
 
   registerAdmin(data: any) {
     console.log(data);
-    return this.http.post<any>('http://localhost:1001/addAdmin', data);
+    return this.http.post<any>(`${this.baseurl}/addAdmin`, data);
   }
 
   loginCustomer(data: any): Observable<any> {
-    return this.http.post<any>('http://localhost:1001/userLogin', data);
+    return this.http.post<any>(`${this.baseurl}/userLogin`, data);
   }
 
   loginAdmin(data: any): Observable<any> {
-    return this.http.post<any>('http://localhost:1001/login', data);
+    return this.http.post<any>(`${this.baseurl}/adminLogin`, data);
   }
 
   // addThumbnail(t:any) {
@@ -60,17 +60,22 @@ export class EditingDataService {
   // }
 
   uploadVideo(data: any) {
-    return this.http.post('http://localhost:1001/videoUpload', data);
+    return this.http.post(`${this.baseurl}/videoUpload`, data);
   }
 
   videoRequest(data: any) {
     console.log(data);
-    return this.http.post('http://localhost:1001/videoRequest', data);
+    return this.http.post(`${this.baseurl}/videoRequest`, data);
   }
 
   saveGoogleInfo(data: any) {
     console.log(data);
-    return this.http.post('http://localhost:1001/googleLogin', data);
+    return this.http.post(`${this.baseurl}/googleLogin`, data);
+  }
+
+  saveFacebookInfo(data: any) {
+    console.log(data);
+    return this.http.post(`${this.baseurl}/facebookLogin`, data);
   }
 
   getEmail() {
@@ -79,17 +84,11 @@ export class EditingDataService {
 
   getSingleUser(): Observable<any> {
     this.data = this.getEmail();
-    return this.http.get<any>(`${'http://localhost:1001/user'}/${this.data}`);
+    return this.http.get<any>(`${this.baseurl}/user/${this.data}`);
   }
 
   saveFeedbacks(formData:any) {
-
-    // const formData = new FormData();
-    // email=this.getEmail;
-    // formData.append('email',email);
-    // formData.append('rating', rating);
-    // formData.append('experience', experience);
     console.log(formData);
-    return this.http.post('http://localhost:1001/feedback', formData);
+    return this.http.post(`${this.baseurl}/feedback`, formData);
   }
 }

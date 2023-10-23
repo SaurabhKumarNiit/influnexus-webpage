@@ -75,7 +75,7 @@ export class RegisterInterfaceComponent implements OnInit {
 
           Swal.fire({
             title:
-              'You are registered SuccessFull Now you Log In with your Email & Password',
+              'You are registered SuccessFully',
             showClass: {
               popup: 'animate__animated animate__fadeInDown',
             },
