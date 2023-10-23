@@ -20,7 +20,7 @@ export class VideoRequestComponent {
   ) {}
   
 
-  note:Register={email:'',name:'',phone:'',duration:'',videoType:'',platform:'',frequency:'',budget:'',specifications:'',genre:'',afterEffects:'',animationType:''};
+  note:Register={email:'',name:'',phone:'',duration:'',videoType:'',platform:'',frequency:'',budget:'',specifications:'',genre:'',afterEffects:'',animationType:'',requirment:''};
 
 
   onSubmit(form: NgForm){

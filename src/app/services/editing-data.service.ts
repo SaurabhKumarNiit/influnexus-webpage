@@ -93,8 +93,8 @@ export class EditingDataService {
   }
 
   
-  RemoveUser() {
+  RemoveUser(email:string) {
     this.data = this.getEmail();
-    return this.http.delete<any>(`${this.baseurl}/user/delete/${this.data}`);
+    return this.http.delete<any>(`${this.baseurl}/user/delete/${email}`);
   }
 }

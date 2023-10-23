@@ -61,14 +61,21 @@
             </div>
           </div>
         </div>
+
+        <div class="form first">
+          <div class="input-field">
+            <label for="phone">Requirment</label>
+            <!-- <input type="number" placeholder="Enter Your Phone No" name="phone" [(ngModel)]="note.phone"  #phone="ngModel"/> -->
+            <textarea  placeholder="Describe your Requirment " required [(ngModel)]="note.requirment" name="requirment" #requirment="ngModel" ></textarea>
+          </div>
+        </div>
   
         <div class="form first">
-          <span class="title">Advance Details</span>
+          <span class="title">Additional Details</span>
           <div class="fields">
             <div class="input-field">
-              <label for="frequency">Frequency *</label>
-              <input type="text" list="frequency" placeholder="Enter Your Frequency" name="frequency" [(ngModel)]="note.frequency" required #frequency="ngModel"  [class.is-invalid]="frequency.invalid && frequency.touched"/>
-               <small *ngIf="frequency.touched && frequency.invalid" class="text-danger">required field *</small>
+              <label for="frequency">Frequency</label>
+              <input type="text" list="frequency" placeholder="Enter Your Frequency" name="frequency" [(ngModel)]="note.frequency"  #frequency="ngModel"  />
                <datalist id="frequency">
                  <option value="Monthly"></option>
                  <option value="Annually"></option>
@@ -77,23 +84,19 @@
             </div>
   
             <div class="input-field">
-              <label for="budget">Buget (As per frequency) *</label>
-              <input type="text" placeholder="Enter Your Buget" name="budget" [(ngModel)]="note.budget" required #budget="ngModel"  [class.is-invalid]="budget.invalid && budget.touched"/>
-               <small *ngIf="budget.touched && budget.invalid" class="text-danger">required field *</small>
+              <label for="budget">Buget (As per frequency)</label>
+              <input type="text" placeholder="Enter Your Buget" name="budget" [(ngModel)]="note.budget" #budget="ngModel"/>
             </div>
   
             <div class="input-field">
-              <label for="specifications">Specifications *</label>
-              <input type="text" placeholder="Enter Your Specifications" name="specifications" [(ngModel)]="note.specifications" required #specifications="ngModel"  [class.is-invalid]="specifications.invalid && specifications.touched"/>
-              <small *ngIf="specifications.touched && specifications.invalid" class="text-danger">required field *</small>
+              <label for="specifications">Specifications</label>
+              <input type="text" placeholder="Enter Your Specifications" name="specifications" [(ngModel)]="note.specifications" #specifications="ngModel"/>
             </div>
   
             <div class="input-field">
-              <label for="name">Genre *</label>
-  
+              <label for="name">Genre</label>
               <!-- <input type="text" name="Genre" list="Genre" placeholder="Choose Your Genre"/> -->
-              <input type="text" name="Genre" list="Genre" placeholder="Choose Your Genre" [(ngModel)]="note.genre" required #genre="ngModel"  [class.is-invalid]="genre.invalid && genre.touched"/>
-               <small *ngIf="genre.touched && genre.invalid" class="text-danger">required field *</small>
+              <input type="text" name="Genre" list="Genre" placeholder="Choose Your Genre" [(ngModel)]="note.genre" #genre="ngModel"/>
               <datalist id="Genre">
                 <option value="Comedy"></option>
                 <option value="Action"></option>
@@ -106,9 +109,8 @@
             </div>
   
             <div class="input-field">
-              <label for="afterEffects">After Effect *</label>
-              <input type="text" name="afterEffects" list="effect" placeholder="Choose Your After Effect" [(ngModel)]="note.afterEffects" required #afterEffects="ngModel"  [class.is-invalid]="afterEffects.invalid && afterEffects.touched"/>
-              <small *ngIf="afterEffects.touched && afterEffects.invalid" class="text-danger">required field *</small>
+              <label for="afterEffects">After Effect</label>
+              <input type="text" name="afterEffects" list="effect" placeholder="Choose Your After Effect" [(ngModel)]="note.afterEffects" #afterEffects="ngModel"/>
               <datalist id="effect">
                 <option value="Fade In"></option>
                 <option value="Fade Out"></option>
@@ -124,9 +126,8 @@
             </div>
   
             <div class="input-field">
-              <label for="animationType">Animation Type *</label>
-              <input type="text" name="animationType" list="animationType" placeholder="Choose Your Animation" [(ngModel)]="note.animationType" required #animationType="ngModel"  [class.is-invalid]="animationType.invalid && animationType.touched"/>
-              <small *ngIf="animationType.touched && animationType.invalid" class="text-danger">required field *</small>
+              <label for="animationType">Animation Type</label>
+              <input type="text" name="animationType" list="animationType" placeholder="Choose Your Animation" [(ngModel)]="note.animationType" #animationType="ngModel"/>
               <datalist id="animationType">
                 <option value="2D"></option>
                 <option value="3D"></option>
@@ -136,7 +137,7 @@
           </div>
         </div>
   
-        <button type="submit" >Apply For Vedio Request</button>
+        <button type="submit" >Apply For Video Request</button>
       </form>
     </div>
     </section>

@@ -5,6 +5,7 @@ export type Register = {
     duration?:string;
     platform?: string,
     videoType?:string,
+    requirment?:string,
     frequency?: string,
     specifications?:string,
     budget?: string,

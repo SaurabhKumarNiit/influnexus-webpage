@@ -84,7 +84,7 @@
     padding-top: 50px;
     background: #175d69;
     flex-direction: column;
-    transition: 0.3s ease;
+  
   }
 
   .navbar #menu-toggle:checked ~ .links {
@@ -100,7 +100,7 @@
 #text {
   position: relative;
   left: -100%;
-  animation: anim3 1s forwards 2s;
+  animation: anim3 0s forwards 1s;
 }
 
 @keyframes anim3 {
@@ -120,7 +120,7 @@
   width: 100%;
   position: absolute;
   top: -100%;
-  animation: anim4 1s forwards 1.5s;
+  animation: anim4 0.5s forwards 0.8s;
 }
 
 #logo {

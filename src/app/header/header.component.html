@@ -1,35 +1,5 @@
 
-<div id="box3">
-  <div id="container"  class="headbar">
-      <div id="menu" class="topnav">
-            <nav class="navbar">
-              <div class="logo"><a href="#">INFLUNEXUS</a></div>
-              
-              <input type="checkbox" id="menu-toggle" />
-              <label for="menu-toggle" id="hamburger-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                  <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-              </label>
-              <ul class="links">
-                <!-- <li><a href="home" class="active">Home</a></li> -->
-                <li><button routerLink="/home" class="active">Home</button></li>
-                <li><button routerLink="/video-request" >Video-Request</button></li>
-                <li><button routerLink="/feedback">Feedback</button></li>
-                <!-- <li><a href="add-thumbnail">New-Video</a></li> -->
-                <!-- <li><a href="/login" >Sign In</a></li> -->
-                <li><button routerLink="/login" class="signin" *ngIf="!user">Sign In</button></li>
-
-                <li><button *ngIf="user" (click)="logOut()" >Sign Out </button></li>
-                <li  class="myDIV" >
-                  <img class="rounded-circle"  [src]="urllink" alt="{{user.photoUrl}}" style="height: 50px; width: 50px;" id="photo">
-                  <div class="hide">{{user.name}}</div>
-                </li>          
-              </ul>
-            </nav>    
-      </div>
-  </div>
-</div>
+<app-navbar></app-navbar>
 
 <div class="banner">
   

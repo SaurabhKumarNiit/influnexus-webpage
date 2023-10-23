@@ -69,7 +69,13 @@ logIn(){
     })
   }
 }
-
+// logOut(){
+//   this.profileService.RemoveUser().subscribe({});
+//   localStorage.removeItem('email'),
+//   this.router.navigateByUrl('/login'),
+//   console.log("Removed");
+//   window.location.reload();
+// }
 
   logOut(){
 
@@ -82,8 +88,14 @@ logIn(){
       cancelButtonColor: '#d33',
       confirmButtonText: 'Yes, LogOut!'
     }).then((result) => {
+      console.log(this.user.email+'Email');
+      this.profileService.RemoveUser(this.user.email).subscribe(res=>{
+
+        console.log("Removed Success");
+      });
+
       if (result.isConfirmed) {
-        this.profileService.RemoveUser().subscribe({});
+       
         Swal.fire(
           'LogOut!',
           'Your are Logout...',
@@ -91,7 +103,9 @@ logIn(){
         ),
         localStorage.removeItem('email'),
           this.router.navigateByUrl('/login'),
-          console.log("Log Out Success")
+          // window.location.reload();
+          console.log("Log Out Success");
+         
       }
     })
   }

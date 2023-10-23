@@ -6,7 +6,7 @@ box-sizing: border-box;
 font-family: 'Roboto',sans-serif;
 }
 section{
-  margin-top: 3%;
+  margin-top: 5%;
     min-height: 100vh;
     display: flex;
     align-items:center;
@@ -25,7 +25,7 @@ body::before{
     max-width: 900px;
     width: 100%;
     border-radius: 6px;
-    padding: 30px;
+    padding: 10px;
     margin: 0 15px;
     background: rgba(0,0,0,0.75);
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
@@ -98,11 +98,11 @@ form .fields .input-field{
     margin: 4px 0;
 }
 .input-field label{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: #fff ;
 }
-.input-field input{
+.input-field input ,textarea{
     outline: none;
     font-size: 14px;
     font-weight: 400;
@@ -112,6 +112,10 @@ form .fields .input-field{
     padding: 0 15px;
     height: 42px;
     margin: 8px 0;
+}
+textarea{
+  width: 100%;
+  height: 80px;
 }
 .input-field input:is(:focus, :valid){
     box-shadow: 0 3px 6px rgba(0,0,0,0.13);

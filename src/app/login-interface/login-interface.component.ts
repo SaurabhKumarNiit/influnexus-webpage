@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,Validators } from '@angular/forms';
+import { FormBuilder,NgForm,Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 // import jwt_decode from 'jwt-decode';
 import Swal from 'sweetalert2';
@@ -52,8 +52,6 @@ export class LoginInterfaceComponent implements  OnInit {
   signInWithFB(): void {
     
     this.socialService.signIn(FacebookLoginProvider.PROVIDER_ID);
-
-    // user.response.picture.data.url
   }
 
   
