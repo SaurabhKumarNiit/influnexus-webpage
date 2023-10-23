@@ -83,6 +83,7 @@ logIn(){
       confirmButtonText: 'Yes, LogOut!'
     }).then((result) => {
       if (result.isConfirmed) {
+        this.profileService.RemoveUser().subscribe({});
         Swal.fire(
           'LogOut!',
           'Your are Logout...',

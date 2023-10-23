@@ -91,4 +91,10 @@ export class EditingDataService {
     console.log(formData);
     return this.http.post(`${this.baseurl}/feedback`, formData);
   }
+
+  
+  RemoveUser() {
+    this.data = this.getEmail();
+    return this.http.delete<any>(`${this.baseurl}/user/delete/${this.data}`);
+  }
 }
