@@ -77,6 +77,10 @@ logIn(){
 //   window.location.reload();
 // }
 
+reload(){
+  window.location.reload();
+}
+
   logOut(){
 
     Swal.fire({
@@ -103,8 +107,11 @@ logIn(){
         ),
         localStorage.removeItem('email'),
           this.router.navigateByUrl('/login'),
-          // window.location.reload();
           console.log("Log Out Success");
+          setTimeout(() => {
+            window.location.reload();
+          }, 2000);
+          
          
       }
     })

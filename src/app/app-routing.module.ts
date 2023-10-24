@@ -8,6 +8,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { FaqComponent } from './faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -15,11 +16,11 @@ const routes: Routes = [
   // {path:'playback',component:VideoPlayerComponent},
   {path:'login',component:LoginInterfaceComponent},
   {path:'register',component:RegisterInterfaceComponent},
-  {path:'video-request',component:VideoRequestComponent},
+  {path:'video-request',component:VideoRequestComponent,canActivate: [AuthGuard]},
   // {path:'add-thumbnail',component:ThumbnailVideoComponent},
   // {path:'get-video-request',component:GetVideoRequestComponent},
   // {path:'get-thumbnail-data',component:GetThumbnailInfoComponent},
-  {path:'feedback',component:FeedbackComponent},
+  {path:'feedback',component:FeedbackComponent,canActivate: [AuthGuard]},
   {path:'faq',component:FaqComponent},
   {path:'contact',component:ContactComponent},
   {path:'about',component:AboutComponent},

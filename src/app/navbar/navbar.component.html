@@ -3,7 +3,7 @@
   <div id="container"  class="headbar">
       <div id="menu" class="topnav">
             <nav class="navbar">
-              <div class="logo"><a href="#">INFLUNEXUS</a></div>
+              <div class="logo"><a href="/home" (click)="reload()">INFLUNEXUS</a></div>
               
               <input type="checkbox" id="menu-toggle" />
               <label for="menu-toggle" id="hamburger-btn">
@@ -13,8 +13,8 @@
               </label>
               <ul class="links">
                 <!-- <li><a href="home" class="active">Home</a></li> -->
-                <li><button routerLink="/home" class="active">Home</button></li>
-                <li><button routerLink="/video-request" >Video-Request</button></li>
+                <li><a href="/home" class="active">Home</a></li>
+                <li><button routerLink="/video-request">Video-Request</button></li>
                 <li><button routerLink="/feedback">Feedback</button></li>
                 <!-- <li><a href="add-thumbnail">New-Video</a></li> -->
                 <!-- <li><a href="/login" >Sign In</a></li> -->

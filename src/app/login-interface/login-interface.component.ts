@@ -82,6 +82,9 @@ export class LoginInterfaceComponent implements  OnInit {
           });
           // this.registrationForm.reset();
           this.router.navigateByUrl('/home');
+          setTimeout(() => {
+            window.location.reload();
+          }, 2000);
         },
         (error) => {
           Swal.fire({

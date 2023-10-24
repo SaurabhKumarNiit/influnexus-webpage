@@ -45,7 +45,22 @@
  border-radius: 10px;
  background-color: rgba(0,0,0,0.75);
 }
-
+.navbar .links a{
+  justify-content: center;
+  font-weight: 700;
+  text-decoration: none;
+  color:  white;
+  padding: 7px 0;
+  transition: 0.2s ease;
+  width: 140px;
+  font-weight: bold;
+  font-size: 15px;
+ border-radius: 10px;
+ border: 1px solid white;
+ background-color: rgba(0,0,0,0.75);
+ margin-bottom: 10px;
+  
+} 
 .navbar .links button:hover {
   color: #47b2e4;
 }
@@ -165,7 +180,7 @@
   color: black;
 }
 
-.topnav button.active {
+.topnav a.active {
   background-color: #04aa6d;
   color: white;
 }
