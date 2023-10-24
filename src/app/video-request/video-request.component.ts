@@ -34,7 +34,7 @@ export class VideoRequestComponent {
 
         Swal.fire({
           title:
-            'Your Video Request Successfully Submitted',
+            'Successfully Submitted',
           showClass: {
             popup: 'animate__animated animate__fadeInDown',
           },

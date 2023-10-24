@@ -1,9 +1,10 @@
 
 section{
-    text-align: center;
+    /* text-align: center; */
     margin-top: 130px;
 }
 h1{
+  text-align: center;
     text-shadow: 1px 1px 1px #000, 3px 3px 5px rgb(138, 237, 84);
 }
 .accordion{

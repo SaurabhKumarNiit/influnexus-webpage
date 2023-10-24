@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact',
