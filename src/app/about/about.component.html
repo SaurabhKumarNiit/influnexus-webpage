@@ -1,40 +1,70 @@
-<app-navbar></app-navbar>
 
-<body (window:scroll)="startAnimations()">
-    <header [@fadeIn]="headerState">
-      <h1 class="main-heading">About Influnexus Video Editing</h1>
-    </header>
-  
-    <section class="about-content">
-      <div class="intro">
-        <p>Welcome to Influnexus Video Editing, where creativity meets technology. Our mission is to empower content
-          creators with powerful and intuitive video editing tools.</p>
-      </div>
-  
-      <div class="features">
-        <h2>Key Features</h2>
-        <ul>
-          <li>Advanced Video Editing</li>
-          <li>Real-time Collaboration</li>
-          <li>Customizable Effects and Transitions</li>
-          <li>Mobile Editing Support</li>
-          <li>High-Quality Export Options</li>
-        </ul>
-      </div>
-    </section>
-  
-    <section class="team">
-      <h2 [@slideIn]="teamHeaderState">Meet the Team</h2>
-  
-      <div class="team-member" *ngFor="let member of teamMembers" [@stagger]="{ value: 'slideIn', params: { delay: '100ms' } }">
-        <img src="{{ member.image }}" alt="{{ member.name }}" width="400px">
-        <div class="info">
-          <h3>{{ member.name }}</h3>
-          <p>{{ member.role }}</p>
+<app-navbar></app-navbar>
+<div class="about-section"  [@fadeIn]>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="fade-in">
+          <h2>Welcome to Influnexus Video Editing</h2>
+          <p>Influnexus Video Editing is your creative partner in crafting captivating visual content. We specialize in professional video editing, bringing your ideas to life with a touch of innovation and expertise.</p>
+          <p>Our mission is to empower creators, influencers, and businesses to tell their stories through stunning visuals. Whether it's video editing, reels creation, graphic design, animation, or motion graphics, we've got you covered.</p>
+          <p>At Influnexus, we understand the power of visual storytelling, and our team of skilled editors and designers is dedicated to elevating your content to new heights.</p>
+          <p>Join us on this visual journey, where creativity knows no bounds, and every frame tells a unique story.</p>
+          <a href="#" class="btn btn-primary">Discover Our Services</a>
         </div>
-       
       </div>
-    </section>
-  </body>
-  <br><br>
-  <app-footer></app-footer>
+    </div>
+  </div>
+</div>
+
+<div class="team-section text-center" [@fadeIn]>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="fade-in">
+          <h2>Meet Our Team</h2>
+          <div class="row">
+            <div class="col-md-4 team-member">
+              <img src="https://imgs.search.brave.com/2u_uW8WWNfXK7XZ3BVaMISjBjcejRXfzo5CRhOiFkXA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdDIu/ZGVwb3NpdHBob3Rv/cy5jb20vMjIwODY4/NC8xMTE1MS9pLzYw/MC9kZXBvc2l0cGhv/dG9zXzExMTUxMjMy/Mi1zdG9jay1waG90/by1tYXJrZXRpbmct/bWFuYWdlci1zbWls/aW5nLmpwZw">
+              <h4>Rohit Gupta</h4>
+              <p>CEO</p>
+            </div>
+            <div class="col-md-4 team-member">
+              <img src="https://media.istockphoto.com/id/1413766112/photo/successful-mature-businessman-looking-at-camera-with-confidence.webp?b=1&s=170667a&w=0&k=20&c=lrHSjzuqKIAC76-vpOhzR7pRsP38DGPWt7x7SOFbm0Q=" alt="Lead Developer">
+              <h4>John Doe</h4>
+              <p>Lead Developer</p>
+            </div>
+            <div class="col-md-4 team-member">
+              <img src="https://media.istockphoto.com/id/1279844456/photo/young-indian-business-woman-entrepreneur-looking-at-camera-in-the-office.jpg?s=612x612&w=0&k=20&c=QuLbOHis00BKOYksMEJhmQulJJmCSrvcIV6StHCivfk=" alt="Head UX Designer">
+              <h4>Jane Smith</h4>
+              <p>Head UX Designer</p>
+            </div>
+        
+            <!-- Add more team members as needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="services-section" [@fadeIn]>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Products and Services</h2>
+      </div>
+      <div class="col-md-4" *ngFor="let service of services">
+        <div class="card mb-4">
+          <img src="{{ service.imgPath }}" height="250px" class="card-img-top" alt="{{ service.title }}">
+          <div class="card-body">
+            <h4 class="card-title">{{ service.title }}</h4>
+            <p class="card-text">{{ service.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

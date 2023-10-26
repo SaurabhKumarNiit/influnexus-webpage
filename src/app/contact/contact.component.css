@@ -7,8 +7,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 8px;
-    animation: fadeIn 1s ease-out;
+    animation: fadeIn 2s ease-out;
     margin-bottom: 50px;
+  }
+  .head{
+   display: none;
   }
   
   h2 {
@@ -122,6 +125,17 @@
     .label-container{
       font-size: 12px;
     }
+    .head{
+      display: block;
+    }
+    .label-container{
+      display: none;
+    }
+    small{
+      font-size: 13px;
+     display: block;
+     margin-left: 5px;
+   }
   }
   
   /* Animations */
@@ -162,4 +176,12 @@
       transform: translateX(0);
     }
   }
+  @media (min-width: 1025px) and (max-width: 1900px){
+
+    small{
+      position: absolute;
+       margin-top: 56px;
+      margin-left: 17px;
   
+  }
+}

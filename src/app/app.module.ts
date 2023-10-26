@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -55,7 +56,8 @@ import {  GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
     FormsModule,
     GoogleSigninButtonModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatProgressBarModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },

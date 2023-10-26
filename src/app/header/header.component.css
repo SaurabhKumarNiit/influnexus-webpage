@@ -158,7 +158,7 @@
       padding-top: 50px;
       background: #175d69;
       flex-direction: column;
-      transition: 0.3s ease;
+      transition: 0.9s ease;
     }
   
     .navbar #menu-toggle:checked ~ .links {

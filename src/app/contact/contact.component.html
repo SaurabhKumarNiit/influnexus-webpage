@@ -2,19 +2,27 @@
 
 <div [@fadeIn]>
 <div class="container">
+  <div class="head">
+    <h2  >Contact-Us</h2>
+    <hr>
+  </div>
+ 
     <div class="label-container">
       <h2 class="left-label">Contact </h2>
       <h2 class="right-label">-Us</h2>
     </div>
-    <form (ngSubmit)="sendEmail()" class="contact-form">
+    <form #form="ngForm" (ngSubmit)="sendEmail(form)" class="contact-form">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required [(ngModel)]="formData.name">
+      <input type="text" id="name" name="name" #name="ngModel" required [(ngModel)]="formData.name"  [class.is-invalid]="name.invalid && name.touched">
+      <small *ngIf=" name.touched && name.invalid" class="text-danger">required field *</small>
   
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required [(ngModel)]="formData.email">
+      <input type="email" id="email" name="email" #email="ngModel" required [(ngModel)]="formData.email" [class.is-invalid]="name.invalid && name.touched">
+      <small *ngIf=" email.touched && email.invalid" class="text-danger">required field *</small>
   
       <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required [(ngModel)]="formData.message"></textarea>
+      <textarea id="message" name="message" rows="4" #message="ngModel" required [(ngModel)]="formData.message" [class.is-invalid]="name.invalid && name.touched"></textarea>
+      <small *ngIf=" message.touched && message.invalid" class="text-danger">required field *</small>
   
       <button type="submit">Send Message</button>
     </form>

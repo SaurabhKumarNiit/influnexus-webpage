@@ -5,11 +5,18 @@ import { EditingDataService } from '../services/editing-data.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Register } from 'src/models/Register';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-video-request',
   templateUrl: './video-request.component.html',
-  styleUrls: ['./video-request.component.css']
+  styleUrls: ['./video-request.component.css'],
+  animations: [
+    trigger('fadeIn', [
+      state('void', style({ opacity: 0 })),
+      transition(':enter', animate('1s ease-out')),
+    ]),
+  ],
 })
 export class VideoRequestComponent {
 

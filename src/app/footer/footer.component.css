@@ -1,7 +1,7 @@
 body, ul, li, p, a, label, input, div {
     font-family: 'Mukta', sans-serif;
-      font-size: 18px !important;
-      font-weight: 300 !important;
+      font-size: 21px;
+      font-weight: 300;
       color: white;
     }
     .h1 {
@@ -12,7 +12,7 @@ body, ul, li, p, a, label, input, div {
     .h2 {
       font-family: 'Young Serif', serif;
       font-size: 30px !important;
-      font-weight: 300;
+      font-weight: 600;
     }
     .h3 {
       font-family: 'Young Serif', serif;
@@ -34,8 +34,14 @@ body, ul, li, p, a, label, input, div {
     }
 
     /* Footer */
-    #tempaltemo_footer a { color: #c6cce7;}
-    #tempaltemo_footer a:hover { color: #68bb7d;}
+    /* #tempaltemo_footer a{ color: #c6cce7; 
+      
+    } */
+    #tempaltemo_footer a:hover {
+      font-size: 25px;
+      font-weight: bold;
+      transition: 0.6s ease-in-out;
+       color: #68bb7d;}
     #tempaltemo_footer ul.footer-link-list li { padding-top: 10px;}
     #tempaltemo_footer ul.footer-icons li {
       width: 2.6em;
@@ -53,7 +59,7 @@ body, ul, li, p, a, label, input, div {
     #tempaltemo_footer .border-light { border-color: #2d343f !important;}
   
     .product-wap .h3, .product-wap li, .product-wap i, .product-wap p {
-      font-size: 12px !important;
+      font-size: 12px;
     }
     .product-wap .product-color-dot {
       width: 6px;
@@ -66,54 +72,42 @@ body, ul, li, p, a, label, input, div {
       align-items: center;
       justify-content: center;
       width: 100%; 
-      height: 50vh;
+      height: 30vh;
     }
-    #tooltip{
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      cursor: pointer;
-      padding: 7px;
-      font-size: 25px;
+
+    #butt{
+      background-color: gray;
+      color: white;
+      width: 200px;
+      border-radius: 10px;
       font-weight: bold;
-      font-family: sans-serif;
+    }
+    #data ul li button:hover{
+      background-color: black;
+      font-size: 24px;
+      border: 2px solid white;
+      color: white;
+      transition: 0.6s ease-in-out;
+    }
+    #butt :hover{
+      background-color:black ;
     }
 
-    #tooltipText{
-      position: absolute;
-      left: 20%;
-      top: 0;
-      transform: translateX(-50%);
-      background-color: #fff;
-      color: #000;
-      white-space: nowrap;
-      padding: 10px 15px;
-      border-radius: 7px;
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    #tooltipText::before{
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 100%;
-      transform: translateX(-50);
-    
+    /* @media screen and (max-width: 767px){
+      #tempaltemo_footer{
+        margin-top: 50px;
+      }
+    } */
 
-    }
-    #tooltip:hover #tooltipText{
-      top: -130%;
-      visibility: visible;
-      opacity: 1;
-    }
 
     section{
+      /* margin-left: 100px; */
       height: 100%;
       width: 100%;
     }
     .wrapper{
       display: inline-flex;
+      margin-left: 50px;
     }
     .wrapper .icon{
     

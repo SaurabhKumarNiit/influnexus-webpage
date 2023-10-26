@@ -1,142 +1,95 @@
+/* about-us.component.css */
+
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f8f8f8;
-    margin-top: 80px;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  header {
-   
-    color: black;
-    text-align: center;
-    padding: 20px;
- 
-  }
-  .main-heading {
-    animation: fadeIn 1s ease-out;
-    font-weight: bold;
-  }
-  
-  /* Slide-in Animation */
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .team h2 {
-    animation: slideIn 1s ease-out;
-  }
-  
-  /* Stagger Animation */
-  @keyframes staggerSlideIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .team-member {
-    animation: staggerSlideIn 0.5s ease-out;
-  }
-  
-  .about-content {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-  
-  .intro {
-    margin-bottom: 20px;
-    
-  }
-  
-  h2{
-    color: black;
-  }
-  .features ul{
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+.about-section{
+  margin-top: 50px;
+}
+.about-section,
+.team-section,
+.services-section {
+  padding: 50px 0;
+  text-align: center;
+}
 
-    
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-  }
-  li {
-    margin-bottom: 8px;
-  }
-  
-  .team {
-  
-    padding: 20px;
-    text-align: center;
-  
-    .team-member {
-      margin-top: 20px;
-  
-    }
-  }
-  .team h3 {
-    color: #333;
-  }
+.about-section h2,
+.team-section h2,
+.services-section h2 {
+  font-size: 36px;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  background-color: rgba(0,0,0,0.75);
+}
+.about-section p{
 
-  .team  p {
-    color: #666;
-  }
+  color: #585d62;
+  font-size: 22px;
+}
+.team-section p,
+.services-section p {
+  font-size: 18px;
+  color: #6c757d;
+}
 
-  .team img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 10px;
-    margin-right: 50px;
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.team-member {
+  margin-bottom: 30px;
+}
+
+.team-member img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
-  .team-member{
-    display: inline-flex;
-  }
-  .info{
-    position: absolute;
-  margin-top: 150px;
-  }
-  
-  @media screen and (max-width: 600px) {
-    header {
-      padding: 10px;
-    }
-  
-    .main-heading {
-      font-size: 1.5em;
-    }
-  
-    .about-content {
-      padding: 10px;
-    }
-  
-    .team-member img{
-      
-        width: 100px;
-        height: 100px;
-      
-    }
-  }
+}
+
+.services-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.services-section .card-title {
+  font-size: 24px;
+}
+
+.services-section .card-text {
+  font-size: 18px;
+}

@@ -2,6 +2,7 @@
 section{
     /* text-align: center; */
     margin-top: 130px;
+    /* height: 800px; */
 }
 h1{
   text-align: center;
@@ -68,6 +69,7 @@ input[type="radio"]{
   }
   section{
     margin-top: 20%;
+
    
   }
   .accordion{
@@ -83,6 +85,10 @@ input[type="radio"]{
   }
   .container form{
     position: inherit;
+  }
+
+  .big{
+    height: 70px;
   }
   
   }

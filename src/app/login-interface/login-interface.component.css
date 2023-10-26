@@ -18,7 +18,7 @@ body::before {
   background-position: center;
 }
 .form-wrapper {
-  width: 430px;
+  width: 420px;
   height: 600px;
   padding: 30px;
   border-radius: 5px;
@@ -93,7 +93,6 @@ form .button {
   transition: 0.1s ease;
 }
 .gbutton {
-  background-color: whitesmoke;
   border-radius: 5px;
 }
 form .button:hover {
@@ -133,9 +132,9 @@ form .button:hover {
 
 
 @media screen and (max-width: 767px) {
-  /* .form-wrapper {
-    margin-top: 50px;
-  } */
+  .form-wrapper {
+    width: fit-content;
+  }
   .loginBtn:before {
     left: 13%;
   }

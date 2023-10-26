@@ -5,3 +5,5 @@ body{
      /* background-image: radial-gradient( 
         circle farthest-corner at 10% 20%,  rgb(160, 207, 204) 0%, rgb(118, 159, 154) 90% ); */
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

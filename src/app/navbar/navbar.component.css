@@ -99,7 +99,7 @@
     padding-top: 50px;
     background: #175d69;
     flex-direction: column;
-  
+    transition: 0.6s ease;
   }
 
   .navbar #menu-toggle:checked ~ .links {
@@ -135,7 +135,7 @@
   width: 100%;
   position: absolute;
   top: -100%;
-  animation: anim4 0.5s forwards 0.8s;
+  animation: anim4 1.1s forwards 0.5s;
 }
 
 #logo {
