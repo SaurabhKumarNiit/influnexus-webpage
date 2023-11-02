@@ -124,6 +124,7 @@ form .button:hover {
 
   .form-wrapper {
     top: 46%;
+    width: 100%;
   }
   .form-wrapper form {
     margin: 25 px 0 40px;
@@ -132,9 +133,6 @@ form .button:hover {
 
 
 @media screen and (max-width: 767px) {
-  .form-wrapper {
-    width: fit-content;
-  }
   .loginBtn:before {
     left: 13%;
   }

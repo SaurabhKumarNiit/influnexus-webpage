@@ -69,7 +69,7 @@ import {  GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '249318443467-n1mh98eqh2qaun69ku1iofu39h3tv0h8.apps.googleusercontent.com'
+              '354917431940-isn52pl5oe945tl4lepod9g4j2bsnm0s.apps.googleusercontent.com'            
             )
           },
           {
