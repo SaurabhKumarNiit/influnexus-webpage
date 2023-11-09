@@ -10,7 +10,7 @@ export class EditingDataService {
 
   data: any;
 
-  baseurl = 'https://hardy-drawer-production.up.railway.app';
+  baseurl = 'https://actionable-bag-production.up.railway.app';
   apikey = '08cc33bd5ae3a747598ce2ad84376e66';
 
   getVedioRequestDatav(): Observable<any> {
@@ -36,7 +36,6 @@ export class EditingDataService {
     console.log(data);
     return this.http.post<any>(`${this.baseurl}/addAdmin`, data);
   }
-
   loginCustomer(data: any): Observable<any> {
     return this.http.post<any>(`${this.baseurl}/userLogin`, data);
   }
