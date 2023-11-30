@@ -31,6 +31,7 @@ import {
   GoogleLoginProvider
 } from '@abacritt/angularx-social-login';
 import {  GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
+import { DisplayPlayerComponent } from './display-player/display-player.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {  GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
     ContactComponent,
     AboutComponent,
     FaqComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    DisplayPlayerComponent
   ],
   imports: [
     BrowserModule,
