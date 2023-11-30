@@ -24,20 +24,26 @@
   
             <div class="input-field">
               <label for="phone">Phone Number</label>
-              <input type="number" placeholder="Enter Your Phone No" name="phone" [(ngModel)]="note.phone"  #phone="ngModel"/>
+              <input type="text" placeholder="Enter Your Phone No" name="phone" [(ngModel)]="note.phone"  #phone="ngModel"/>
               <!-- <small *ngIf="phone.touched && phone.length()" class="text-danger">10 digit required</small> -->
             </div>
   
             <div class="input-field">
-              <label for="duration">Duration in Hour *</label>
-              <input type="text" placeholder="Enter Your Duration In Hour" name="duration" [(ngModel)]="note.duration" required #duration="ngModel"  [class.is-invalid]="duration.invalid && duration.touched"/>
+              <label for="duration">Duration in minute *</label>
+              <input type="number" placeholder="Enter Your Duration" name="duration" [(ngModel)]="note.duration" required #duration="ngModel"  [class.is-invalid]="duration.invalid && duration.touched"/>
               <small *ngIf="duration.touched && duration.invalid" class="text-danger">required field *</small>
             </div>
   
             <div class="input-field">
               <label for="videoType">Video Type *</label>
-              <input type="text" placeholder="Enter Your Video Type" name="videoType" [(ngModel)]="note.videoType" required #videoType="ngModel"  [class.is-invalid]="videoType.invalid && videoType.touched"/>
+              <input type="text" list="type" placeholder="Enter Your Video Type" name="videoType" [(ngModel)]="note.videoType" required #videoType="ngModel"  [class.is-invalid]="videoType.invalid && videoType.touched"/>
               <small *ngIf="videoType.touched && videoType.invalid" class="text-danger">required field *</small>
+              <datalist id="type">
+                <option value="Short"></option>
+                <option value="Long"></option>
+                <option value="Reels"></option>
+                <option value="Other"></option>
+              </datalist>
             </div>
   
             <div class="input-field">
@@ -82,11 +88,18 @@
                  <option value="One Time"></option>
                </datalist>
             </div>
-  
-            <div class="input-field">
-              <label for="budget">Buget (As per frequency)</label>
-              <input type="text" placeholder="Enter Your Buget" name="budget" [(ngModel)]="note.budget" #budget="ngModel"/>
+
+            <div class="bugetData">
+              <label for="mergedInput">Buget (As per frequency)</label>
+              <div id="mergedInput" class="merged-input">
+                  <select id="currency" name="currency" [(ngModel)]="note.selectedCurrency">
+                
+                    <option *ngFor="let currency of currencies" [value]="currency.code">{{ currency.code }}</option>
+                  </select>
+                <input type="number" id="budget"   placeholder="Enter Your Buget" name="budget" [(ngModel)]="note.budget" #budget="ngModel"/>
+              </div>
             </div>
+            
   
             <div class="input-field">
               <label for="specifications">Specifications</label>

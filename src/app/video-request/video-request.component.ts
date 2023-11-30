@@ -27,17 +27,24 @@ export class VideoRequestComponent {
   ) {}
   
 
-  note:Register={email:'',name:'',phone:'',duration:'',videoType:'',platform:'',frequency:'',budget:'',specifications:'',genre:'',afterEffects:'',animationType:'',requirment:''};
+  note:Register={email:'',name:'',phone:'',duration:'',videoType:'',platform:'',frequency:'',budget:'',specifications:'',genre:'',afterEffects:'',animationType:'',requirment:'',selectedCurrency:''};
 
+ 
+
+  currencies = [
+    { code: 'INR', name: 'Indian' },
+    { code: 'USD', name: 'US Dollar' },
+    { code: 'EUR', name: 'Euro' },
+    { code: 'GBP', name: 'British Pound' }
+  ];
 
   onSubmit(form: NgForm){
     if (form.valid) {
       console.log('Form submitted successfully!');
+      console.log('Selected Currency:', this.note.selectedCurrency);
       console.log(this.note);
       
       this.service.videoRequest(this.note).subscribe(response=>{
-
-        // console.log('Response from server:', response);
 
         Swal.fire({
           title:
@@ -61,8 +68,6 @@ export class VideoRequestComponent {
         title: 'Oops...',
         text: 'Please check required fields *',
       });
-
-      // console.log('Form is invalid. Please check the errors.');
     }
   }
 

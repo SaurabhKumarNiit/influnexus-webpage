@@ -8,7 +8,8 @@ export type Register = {
     requirment?:string,
     frequency?: string,
     specifications?:string,
-    budget?: string,
+    selectedCurrency?:string,
+    budget?: any,
     genre?: string,
     afterEffects?: string,
     animationType?: string
