@@ -7,7 +7,7 @@
 .mainpage {
   min-height: 100vh;
   display: flex;
- margin-top: 100px;
+ margin-top: 50px;
   justify-content: center;
 }
 body::before {
@@ -153,6 +153,9 @@ form .button:hover {
     font-size: 0.75rem;
     transform: translateY(-130%);
   }
+  /* .mainpage{
+    margin-top: 50px;
+  } */
 }
 .loginBtn {
   box-sizing: border-box;

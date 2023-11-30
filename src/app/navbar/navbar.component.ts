@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import Swal from 'sweetalert2';
 import { EditingDataService } from '../services/editing-data.service';
 import { Router } from '@angular/router';
@@ -11,6 +11,11 @@ import { User } from 'src/models/User';
 })
 export class NavbarComponent {
 
+  isNavbarCollapsed = false;
+
+toggleNavbar(): void {
+  this.isNavbarCollapsed = !this.isNavbarCollapsed;
+}
   
   urllink:string = "https://nregsmp.org/eService/images/User.png";
   selectFiles(file:any){
@@ -69,13 +74,6 @@ logIn(){
     })
   }
 }
-// logOut(){
-//   this.profileService.RemoveUser().subscribe({});
-//   localStorage.removeItem('email'),
-//   this.router.navigateByUrl('/login'),
-//   console.log("Removed");
-//   window.location.reload();
-// }
 
 reload(){
   window.location.reload();

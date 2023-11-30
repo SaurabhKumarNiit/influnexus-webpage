@@ -6,9 +6,7 @@ body {
   margin: 0;
   padding: 0;
 }
-.about-section{
-  margin-top: 50px;
-}
+
 .about-section,
 .team-section,
 .services-section {
@@ -51,9 +49,10 @@ body {
 }
 
 .team-member img {
-  max-width: 100%;
+  max-width: 90%;
   border-radius: 50%;
   margin-bottom: 10px;
+  border: 3px solid yellow;
 }
 
 .fade-in {
@@ -92,4 +91,11 @@ body {
 
 .services-section .card-text {
   font-size: 18px;
+}
+
+@media screen and (max-width: 767px) {
+
+  .team-member img {
+    max-width: 50%;
+  }
 }
