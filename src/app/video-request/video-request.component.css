@@ -6,7 +6,7 @@ box-sizing: border-box;
 font-family: 'Roboto',sans-serif;
 }
 section{
-  margin-top: 5%;
+ 
     min-height: 100vh;
     display: flex;
     align-items:center;
@@ -65,9 +65,17 @@ body::before{
   }
   small{
     position: absolute;
-     margin-top: 56px;
+     margin-top: 68px;
     margin-left: 17px;
 
+}
+
+.merged-input {
+  padding-left: 25px;
+}
+.merged-input select{
+  padding-right: 40px;
+margin-left: -23px;
 }
 
 }
@@ -152,7 +160,7 @@ form .fields .input-field{
   width: 100%;
 }
 section{
-  margin-top: 20%;
+  margin-top: 10%;
  
 }
 .container header::before{
@@ -163,5 +171,25 @@ width: 0px;
 .container form{
   position: inherit;
 }
-
+#budget {
+  flex: 1;
+  width: 50%;
 }
+.bugetData{
+  width: 100%;
+}
+}
+
+
+.merged-input {
+  display: flex;
+  height: 43px;
+}
+
+.bugetData label{
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff ;
+}
+
+
