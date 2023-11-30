@@ -11,6 +11,11 @@ import { User } from 'src/models/User';
 })
 export class HeaderComponent {
 
+  isNavbarCollapsed = false;
+
+  toggleNavbar(): void {
+    this.isNavbarCollapsed = !this.isNavbarCollapsed;
+  }
 
   urllink:string = "https://nregsmp.org/eService/images/User.png";
   selectFiles(file:any){
