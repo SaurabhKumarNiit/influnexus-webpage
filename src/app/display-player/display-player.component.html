@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="container" [@fadeIn]>
+  <h2 style="text-align: center; font-family: Oswal;">Client Showcase</h2>
+  <hr>
+  <br>
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let info of videos;">
+      <div class="card mb-4 shadow-sm">
+        <video controls class="card-img-top video-zoom video-responsive" src="assets/videos/{{info}}" type="video/mp4"></video>
+      
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

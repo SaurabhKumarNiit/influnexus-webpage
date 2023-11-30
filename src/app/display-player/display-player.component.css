@@ -1,0 +1,29 @@
+
+.container{
+  margin-top: 80px;
+}
+
+.video-zoom {
+  transition: transform 0.3s ease-in-out;
+}
+
+.video-zoom:hover {
+  transform: scale(1.1);
+}
+
+.video-responsive {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 576px) {
+  .card{
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+  .video-responsive {
+   
+    height: auto;
+  }
+}
