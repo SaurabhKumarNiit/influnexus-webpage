@@ -90,7 +90,7 @@ h4{
 
 /* Hero Carousel */
 #template-mo-jassa-hero-carousel {
-  margin-top: -195px;
+  margin-top: -283px;
   background: rgba(219, 231, 239, 0.75) !important;
 }
 /* Accordion */
@@ -268,7 +268,7 @@ h4{
 }
 @media screen and (max-width: 767px){
   #template-mo-jassa-hero-carousel {
-    margin-top: -295px;
+    margin-top: -383px;
   
   }
 
