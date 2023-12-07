@@ -90,13 +90,13 @@
             </div>
 
             <div class="bugetData">
-              <label for="mergedInput">Buget (As per frequency)</label>
+              <label for="mergedInput">Budget (As per frequency)</label>
               <div id="mergedInput" class="merged-input">
                   <select id="currency" name="currency" [(ngModel)]="note.selectedCurrency">
                 
                     <option *ngFor="let currency of currencies" [value]="currency.code">{{ currency.code }}</option>
                   </select>
-                <input type="number" id="budget"   placeholder="Enter Your Buget" name="budget" [(ngModel)]="note.budget" #budget="ngModel"/>
+                <input type="number" id="budget"   placeholder="Enter Your Budget" name="budget" [(ngModel)]="note.budget" #budget="ngModel"/>
               </div>
             </div>
             
