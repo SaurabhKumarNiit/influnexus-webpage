@@ -26,7 +26,11 @@ export class DisplayPlayerComponent {
     'video-5.mp4',
     'video-6.mp4',
     'video-7.mp4',
-    'video-8.mp4'
+    'video-8.mp4',
+    'video-9.mp4',
+    'video-10.mp4',
+    'video-11.mp4',
+    // 'video-8.mp4'
   ];
 
 
