@@ -3,10 +3,20 @@
   <h2 style="text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold;">Client Showcase</h2>
   <hr>
   <br>
+  <div class="filter">
+    <label>Select Video Category:</label>
+    <select [(ngModel)]="selectedCategory" (change)="filterByCategory(selectedCategory)">
+      <option value="" disabled>Select a category</option>
+      <option value="all">All</option>
+      <option *ngFor="let category of ['VFX', 'Animation', 'Reel']" [value]="category">{{ category }}</option>
+    </select>
+    <hr>
+    <br>
+  </div>
   <div class="row">
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let info of videos;">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let item of items | filterByCategory:selectedCategory">
       <div class="card mb-4 shadow-sm">
-        <video controls class="card-img-top video-zoom video-responsive" src="assets/videos/{{info}}" type="video/mp4"></video>
+        <video controls class="card-img-top video-zoom video-responsive" src="assets/videos/{{item.name}}" type="video/mp4"></video>
       
       </div>
     </div>
