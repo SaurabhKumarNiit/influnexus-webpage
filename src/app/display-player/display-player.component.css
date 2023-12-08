@@ -27,3 +27,49 @@
     height: auto;
   }
 }
+
+/* body {
+  font-family: 'Roboto', sans-serif;
+} */
+
+/* Style the container div */
+.filter {
+  margin: 20px;
+  text-align: center;
+}
+
+/* Style the label */
+label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Style the select box */
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Style the select box on focus */
+select:focus {
+  border-color: #4CAF50;
+}
+
+/* Style the options in the select box */
+option {
+  font-size: 14px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+  select {
+    font-size: 12px;
+  }
+}

@@ -33,6 +33,9 @@ import {
 import {  GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
 import { DisplayPlayerComponent } from './display-player/display-player.component';
 
+import { FilterByCategoryPipe } from './filter-by-category.pipe';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +51,8 @@ import { DisplayPlayerComponent } from './display-player/display-player.componen
     AboutComponent,
     FaqComponent,
     FeedbackComponent,
-    DisplayPlayerComponent
+    DisplayPlayerComponent,
+    FilterByCategoryPipe
   ],
   imports: [
     BrowserModule,

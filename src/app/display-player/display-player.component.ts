@@ -18,20 +18,26 @@ import { trigger, style, animate, transition } from '@angular/animations';
 })
 export class DisplayPlayerComponent {
 
-  videos: string[] = [
-    'video-1.mp4', 
-    'video-2.mp4',
-    'video-3.mp4',
-    'video-4.mp4',
-    'video-5.mp4',
-    'video-6.mp4',
-    'video-7.mp4',
-    'video-8.mp4',
-    'video-9.mp4',
-    'video-10.mp4',
-    'video-11.mp4',
-    // 'video-8.mp4'
+  items = [
+    { name: 'video-1.mp4', category: 'Reel' },
+    { name: 'video-2.mp4', category: 'Reel' },
+    { name: 'video-3.mp4', category: 'Reel' },
+    { name: 'video-4.mp4', category: 'Reel' },
+    { name: 'video-5.mp4', category: 'VFX' },
+    { name: 'video-6.mp4', category: 'Reel' },
+    { name: 'video-7.mp4', category: 'VFX' },
+    { name: 'video-8.mp4', category: 'Reel' },
+    { name: 'video-9.mp4', category: 'Reel' },
+    { name: 'video-10.mp4', category: 'Reel' },
+    { name: 'video-11.mp4', category: 'Animation' },
+    // ... other items
   ];
 
+  selectedCategory: string | null = null;
 
+  filterByCategory(category: string | null): void {
+    this.selectedCategory = category;
+  }
 }
+
+
