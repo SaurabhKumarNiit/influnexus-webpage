@@ -34,6 +34,7 @@ import {  GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
 import { DisplayPlayerComponent } from './display-player/display-player.component';
 
 import { FilterByCategoryPipe } from './filter-by-category.pipe';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { FilterByCategoryPipe } from './filter-by-category.pipe';
     FaqComponent,
     FeedbackComponent,
     DisplayPlayerComponent,
-    FilterByCategoryPipe
+    FilterByCategoryPipe,
+    ChatbotComponent
   ],
   imports: [
     BrowserModule,
