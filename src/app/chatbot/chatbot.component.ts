@@ -57,10 +57,10 @@ addClickOutsideListener() {
   });
 }
 
-@HostListener('window:scroll', ['$event'])
-onScroll(event: any) {
-  // Close the chat window on scroll
-  this.closeChatWindow();
-}
+// @HostListener('window:scroll', ['$event'])
+// onScroll(event: any) {
+//   // Close the chat window on scroll
+//   this.closeChatWindow();
+// }
   
 }

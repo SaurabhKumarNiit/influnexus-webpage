@@ -10,7 +10,7 @@ export class EditingDataService {
 
   data: any;
 
-  baseurl = 'https://actionable-bag-production.up.railway.app';
+  baseurl = 'https://cared-tooth-production.up.railway.app/';
   apikey = '08cc33bd5ae3a747598ce2ad84376e66';
 
   getVedioRequestDatav(): Observable<any> {
