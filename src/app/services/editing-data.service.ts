@@ -96,4 +96,5 @@ export class EditingDataService {
     this.data = this.getEmail();
     return this.http.delete<any>(`${this.baseurl}/user/delete/${email}`);
   }
+
 }
