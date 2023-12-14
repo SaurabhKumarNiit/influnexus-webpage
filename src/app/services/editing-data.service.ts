@@ -10,7 +10,8 @@ export class EditingDataService {
 
   data: any;
 
-  baseurl = 'https://zippy-unit-production.up.railway.app';
+  // baseurl = 'https://zippy-unit-production.up.railway.app';
+  baseurl = 'http://localhost:1001';
   apikey = '08cc33bd5ae3a747598ce2ad84376e66';
 
   getVedioRequestDatav(): Observable<any> {

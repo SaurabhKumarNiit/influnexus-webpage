@@ -24,7 +24,7 @@ export class ChatbotComponent {
 
     },
     error:e=>{
-    alert("Failed");
+   console.log("Api Key Failed");
     }
   });
 

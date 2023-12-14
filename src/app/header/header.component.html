@@ -18,7 +18,7 @@
 
     <a><button *ngIf="user" (click)="logOut()" >Sign Out </button></a>
 
-    <a ><img class="rounded-circle"  [src]="urllink" alt="{{user.photoUrl}}" style="height: 50px; width: 50px;" id="photo">
+    <a *ngIf="user"><img class="rounded-circle"  [src]="urllink" alt="{{user.photoUrl}}" style="height: 50px; width: 50px;" id="photo">
       <div class="hide">{{user.name}}</div></a>
   </div>
 </div>
