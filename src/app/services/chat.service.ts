@@ -1,21 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { EditingDataService } from './editing-data.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ChatService {
   private apiUrl = 'https://api.openai.com/v1/chat/completions';
-  private apiKey = 'API_KEY';
+  private apiKey = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private service :EditingDataService) {}
 
-  sendMessage(message: string): Observable<any> {
+
+  sendMessage(message: string, key:string): Observable<any> {
     const requestOptions = {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${this.apiKey}`,
+        Authorization: `Bearer ${key}`,
       },
     };
 
@@ -27,5 +29,9 @@ export class ChatService {
     };
 
     return this.http.post(this.apiUrl, requestBody, requestOptions);
+  }
+
+  getSpecificKey(keyId:number): Observable<any> {
+    return this.http.get<any>(`${'http://localhost:1001'}/apiKeys/${keyId}`);
   }
 }

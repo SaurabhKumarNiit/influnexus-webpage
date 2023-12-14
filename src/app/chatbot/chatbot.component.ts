@@ -14,16 +14,29 @@ export class ChatbotComponent {
 
   constructor(private chatService: ChatService,private renderer: Renderer2, private el: ElementRef) {}
 
-  ngOnInit() {
-    this.addClickOutsideListener();
-  }
+
+  userinfo:any = { keyId:'',apiKey: ''};
+
+  ngOnInit(): void {
+    this.chatService.getSpecificKey(1).subscribe({
+    next:data=>{
+      this.userinfo=data;
+
+    },
+    error:e=>{
+    alert("Failed");
+    }
+  });
+
+  this.addClickOutsideListener();
+}
 
   sendMessage() {
     if (!this.userMessage.trim()) return;
 
     this.botResponse = 'Thinking...';
 
-    this.chatService.sendMessage(this.userMessage).subscribe(
+    this.chatService.sendMessage(this.userMessage,this.userinfo.apiKey).subscribe(
       (response) => {
         this.botResponse = response.choices[0]?.message?.content || 'No response';
       },
