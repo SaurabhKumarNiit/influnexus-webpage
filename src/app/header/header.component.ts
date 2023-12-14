@@ -48,11 +48,6 @@ export class HeaderComponent {
     })
   }
 
-//   ngOnDestroy(){     
-//     this.currentGame = null;   
-// }
-
-
 logIn(){
   if(localStorage.getItem('email')){
     this.router.navigateByUrl(''),

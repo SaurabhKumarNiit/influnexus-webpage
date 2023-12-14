@@ -32,6 +32,6 @@ export class ChatService {
   }
 
   getSpecificKey(keyId:number): Observable<any> {
-    return this.http.get<any>(`${'http://localhost:1001'}/apiKeys/${keyId}`);
+    return this.http.get<any>(`${'https://zippy-unit-production.up.railway.app'}/apiKeys/${keyId}`);
   }
 }
