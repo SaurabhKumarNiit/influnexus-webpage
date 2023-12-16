@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<body>
+    <div class="container-fluid">
+      <h2 class="fs-4 mb-3" style="text-align: center; color: black; font-weight: bold;">All User Feedbacks</h2>
+      <div class="col">
+        <table class="table bg-white rounded shadow-sm table-hover rounded">
+          <thead>
+            <tr>
+              <th scope="col" width="50">#</th>
+              <th scope="col">Email</th>
+              <th scope="col">Rating</th>
+              <th scope="col">Experience</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let info of userinfo; let i = index" id="data">
+              <th scope="row">{{ i + 1 }}.</th>
+              <td>
+                <strong>{{ info.email }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.rating }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.experience }}</strong>
+              </td>
+  
+              <br />
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  

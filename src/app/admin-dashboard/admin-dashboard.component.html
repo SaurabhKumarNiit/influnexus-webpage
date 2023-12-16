@@ -1,0 +1,112 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid">  
+
+  
+    <!-- ========================= Main ==================== -->
+    <div class="main">
+        <h2 style="text-align: center;  background-color: rgba(0,0,0,0.75); color: white; padding: 10px;">ADMIN DASHBOARD</h2>
+  
+        <!-- ======================= Cards ================== -->
+        <div class="cardBox">
+            <div class="cards">
+                <div>
+                    <div class="numbers">{{activeCustomers}}</div>
+                    <div class="cardName">Active Customers</div>
+                </div>
+                <div class="iconBx">
+                  <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
+                  <img src="assets/view.gif" alt="" width="50px">
+                </div>
+            </div>
+  
+            <div routerLink="/get-vedio-request" class="cards">
+                <div>
+                    <div class="numbers">{{totalVideoRequest}}</div>
+                    <div class="cardName">Total Video Request</div>
+                </div>
+  
+                <div class="iconBx">
+                  <img src="assets/video-conference.gif" alt="" width="50px">
+                </div>
+            </div>
+  
+            <div routerLink="/all-feedbacks" class="cards">
+                <div>
+                    <div class="numbers">{{totalFeedbacks}}</div>
+                    <div class="cardName">Feedbacks</div>
+                </div>
+  
+                <div class="iconBx">
+                    <img src="assets/best-customer-experience.gif" alt="" width="50px">
+                </div>
+            </div>
+  
+            <div class="cards">
+                <div>
+                    <div class="numbers">80</div>
+                    <div class="cardName">Thumbnail Info</div>
+                </div>
+  
+                <div class="iconBx">
+                    <img src="assets/presentation.gif" alt="" width="50px">
+                </div>
+            </div>
+        </div>
+  
+        <!-- ================ Order Details List ================= -->
+        <div class="details">
+            <div class="recentOrders">
+                <div class="cardHeader">
+                    <h2>Customer Video Requests</h2>
+                    <a routerLink="/get-vedio-request" class="btn">View All</a>
+                </div>
+
+                <!-- <tr *ngFor="let info of vedioInfo; let i = index" id="data">
+                    <th scope="row">{{ i + 1 }}.</th> -->
+  
+                <table>
+                    <thead>
+                        <tr>
+                            <td><h3>Name</h3></td>
+                            <td><h3>Email</h3></td>
+                            <td><h3>Requirment</h3></td>
+                        </tr>
+                        <hr style="font-weight: bold;">
+                    </thead>
+  
+                    <tbody *ngFor="let info of vedioInfo;" id="data">
+                        <tr>
+                            <td> <strong>{{ info.name }}</strong></td>
+                            <td> <strong>{{ info.email }}</strong></td>
+                            <td style="font-size: 14px; width: 300px;"> <strong>{{ info.requirment }}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+  
+            <!-- ================= New Customers ================ -->
+            <div class="recentCustomers">
+                <div class="cardHeader">
+                    <h2>Recent Customers</h2>
+                </div>
+  
+                <table  *ngFor="let info of userinfo; let i = index" id="data">
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="{{ info.photoUrl}}" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>{{ info.name }}<br> <span>{{info.email}}</span></h4>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+<app-footer></app-footer>

@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+<body>
+    <div class="container-fluid">
+      <h2 class="fs-4 mb-3" style="color: #000; text-align: center;">All Vedio Request Data</h2>
+      <div class="col">
+        <table class="table bg-white rounded shadow-sm table-hover rounded">
+          <thead>
+            <tr>
+              <th scope="col" width="50">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Mobile:No</th>
+              <th scope="col">Duration/Hr</th>
+              <th scope="col">Vedio-Type</th>
+              <th scope="col">Platform</th>
+              <th scope="col">Frequency</th>
+              <th scope="col">Buget</th>
+              <th scope="col">Specification</th>
+              <th scope="col">Genre</th>
+              <th scope="col">Effects</th>
+              <th scope="col">Animation</th>
+              <th scope="col">Requirment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let info of vedioInfo; let i = index" id="data">
+              <th scope="row">{{ i + 1 }}.</th>
+              <td>
+                <strong>{{ info.name }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.email }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.phone }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.duration }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.videoType }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.platform }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.frequency }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.budget }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.specification }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.genre }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.afterEffects }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.animationType }}</strong>
+              </td>
+              <td>
+                <strong>{{ info.requirment }}</strong>
+              </td>
+  
+              <br />
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  
