@@ -13,7 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { FormsModule } from '@angular/forms';
-import {ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
@@ -35,6 +35,10 @@ import { DisplayPlayerComponent } from './display-player/display-player.componen
 
 import { FilterByCategoryPipe } from './filter-by-category.pipe';
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { ActiveUserComponent } from './admin-dashboard/active-user/active-user.component';
+import { FeedbacksComponent } from './admin-dashboard/feedbacks/feedbacks.component';
+import { GetVideoRequestComponent } from './admin-dashboard/get-video-request/get-video-request.component';
 
 
 @NgModule({
@@ -54,7 +58,11 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
     FeedbackComponent,
     DisplayPlayerComponent,
     FilterByCategoryPipe,
-    ChatbotComponent
+    ChatbotComponent,
+    AdminDashboardComponent,
+    ActiveUserComponent,
+    FeedbacksComponent,
+    GetVideoRequestComponent
   ],
   imports: [
     BrowserModule,

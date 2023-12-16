@@ -11,6 +11,9 @@ import { AboutComponent } from './about/about.component';
 import { AuthGuard } from './guard/auth.guard';
 import { DisplayPlayerComponent } from './display-player/display-player.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { FeedbacksComponent } from './admin-dashboard/feedbacks/feedbacks.component';
+import { GetVideoRequestComponent } from './admin-dashboard/get-video-request/get-video-request.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -27,6 +30,13 @@ const routes: Routes = [
   {path:'about',component:AboutComponent},
   {path:'gallery',component:DisplayPlayerComponent},
   {path:'chatbot',component:ChatbotComponent},
+  {path:'admin-data',component:AdminDashboardComponent},
+  {path:'login',component:LoginInterfaceComponent},
+  // {path:'register',component:RegisterInterfaceComponent},
+  // {path:'add-thumbnail',component:ThumbnailVideoComponent},
+  {path:'all-feedbacks',component:FeedbacksComponent},
+  {path:'get-vedio-request',component:GetVideoRequestComponent},
+  // {path:'get-thumbnail-data',component:GetThumbnailInfoComponent},
 
 ];
 

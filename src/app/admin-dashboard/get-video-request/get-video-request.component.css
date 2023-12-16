@@ -1,0 +1,25 @@
+.container-fluid {
+    margin-top: 100px;
+    min-height: 100%;
+  }
+   
+  table {
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+  }
+  thead {
+    background-color: #000;
+  }
+  tbody {
+    color: black;
+  }
+  th{
+    color: #fff;
+  }

@@ -14,6 +14,10 @@ export class EditingDataService {
   // baseurl = 'http://localhost:1001';
   apikey = '08cc33bd5ae3a747598ce2ad84376e66';
 
+  getEmail() {
+    return localStorage.getItem('email');
+  }
+
   getVedioRequestDatav(): Observable<any> {
     return this.http.get<any>(
       `${this.baseurl}/videoRequestData`
@@ -45,19 +49,10 @@ export class EditingDataService {
     return this.http.post<any>(`${this.baseurl}/adminLogin`, data);
   }
 
-  // addThumbnail(t:any) {
-  //   console.log(data);
-  //   return this.http.post<any>("http://localhost:1001/videoUpload",data);
-  // }
+  getAllLoginInfo(): Observable<any> {
+    return this.http.get<any>(`${this.baseurl}/userCredentials`);
+  }
 
-  // uploadVideo(thumbnails: any, videos: any, name: any) {
-  //   const formData = new FormData();
-  //   formData.append('thumbnails', thumbnails);
-  //   formData.append('videos', videos);
-  //   formData.append('name', name);
-
-  //   return this.http.post('http://localhost:1001/videoUpload', formData);
-  // }
 
   uploadVideo(data: any) {
     return this.http.post(`${this.baseurl}/videoUpload`, data);
@@ -78,9 +73,6 @@ export class EditingDataService {
     return this.http.post(`${this.baseurl}/facebookLogin`, data);
   }
 
-  getEmail() {
-    return localStorage.getItem('email');
-  }
 
   getSingleUser(): Observable<any> {
     this.data = this.getEmail();
@@ -92,10 +84,14 @@ export class EditingDataService {
     return this.http.post(`${this.baseurl}/feedback`, formData);
   }
 
+  getAllFeedbacks(): Observable<any> {
+    return this.http.get<any>(`${this.baseurl}/allFeedbacks`);
+  }
   
   RemoveUser(email:string) {
     this.data = this.getEmail();
     return this.http.delete<any>(`${this.baseurl}/user/delete/${email}`);
   }
+
 
 }
