@@ -34,4 +34,18 @@ export class ChatService {
   getSpecificKey(keyId:number): Observable<any> {
     return this.http.get<any>(`${'https://zippy-unit-production.up.railway.app'}/apiKeys/${keyId}`);
   }
+
+  private isPopupVisible = false;
+
+  showPopup() {
+    this.isPopupVisible = true;
+  }
+
+  hidePopup() {
+    this.isPopupVisible = false;
+  }
+
+  isPopupVisible1(): boolean {
+    return this.isPopupVisible;
+  }
 }
