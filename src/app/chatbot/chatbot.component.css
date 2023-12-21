@@ -97,20 +97,21 @@
   display: flex;
   align-items: center;
   margin-top: 10px;
+}
 
-  input {
+.chat-input input {
     flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
 
-  button {
+  .chat-input button {
     padding: 8px;
     margin-left: 10px;
     cursor: pointer;
   }
-}
+
 
 /* Popup Styles */
 .popup-overlay {
@@ -154,16 +155,16 @@
 
 @media (max-width: 768px) {
   .chat-window {
-    width: 70%;
-   
+    width: 90%;
+   height: 80%;
   
   }
   .chat-body {
-    max-height: calc(100% - 100px);
+    max-height: 300px;
   }
 
   .popup-overlay {
-    top: 660px;
+    top: 555px;
     right: 10px;
   }
 }
