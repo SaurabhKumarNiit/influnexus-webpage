@@ -14,7 +14,7 @@
   <div class="chat-window" [ngClass]="{ 'open': isChatOpen }">
     <div class="chat-header">
       <span class="close-btn" (click)="closeChatWindow()"><img src="assets/close.png" alt="" width="30px"></span>
-      <p>ROBORAAH</p>
+      <p> <img src="assets/robot.png" alt="" width="30"> ROBORAAH</p>
     </div>
 
     <div class="chat-body">
@@ -27,7 +27,7 @@
 
     <div class="chat-input">
       <input type="text" id="userMessage" [(ngModel)]="userMessage" (keyup.enter)="sendMessage()" placeholder="Enter a message..." />
-      <a style="padding: 10px;" (click)="sendMessage()"><img src="assets/send.png" alt=""></a>
+      <a style="padding: 10px;" (click)="sendMessage()"><img src="assets/send.png" alt="" width="40px"></a>
     </div>
   </div>
 

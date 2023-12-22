@@ -33,7 +33,7 @@ export class ChatbotComponent {
 
     setTimeout(() => {
       this.hidePopup();
-    }, 5000);
+    }, 10000);
   }
 
   hidePopup() {
