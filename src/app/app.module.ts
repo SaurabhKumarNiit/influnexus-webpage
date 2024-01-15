@@ -39,6 +39,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { ActiveUserComponent } from './admin-dashboard/active-user/active-user.component';
 import { FeedbacksComponent } from './admin-dashboard/feedbacks/feedbacks.component';
 import { GetVideoRequestComponent } from './admin-dashboard/get-video-request/get-video-request.component';
+import { TrainedChatbotComponent } from './trained-chatbot/trained-chatbot.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { GetVideoRequestComponent } from './admin-dashboard/get-video-request/ge
     AdminDashboardComponent,
     ActiveUserComponent,
     FeedbacksComponent,
-    GetVideoRequestComponent
+    GetVideoRequestComponent,
+    TrainedChatbotComponent
   ],
   imports: [
     BrowserModule,

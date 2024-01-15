@@ -15,6 +15,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { FeedbacksComponent } from './admin-dashboard/feedbacks/feedbacks.component';
 import { GetVideoRequestComponent } from './admin-dashboard/get-video-request/get-video-request.component';
 
+
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},

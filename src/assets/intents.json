@@ -1,0 +1,23 @@
+{
+    "intents": [
+      {
+        "name": "Greeting",
+        "examples": [
+          "Hello",
+          "Hi",
+          "Hey",
+          "Good morning"
+        ]
+      },
+      {
+        "name": "Hobbies",
+        "examples": [
+          "What are your hobbies?",
+          "Tell me about your interests",
+          "Do you like [something]?",
+          "What do you enjoy doing?"
+        ]
+      }
+    ]
+  }
+  
