@@ -50,7 +50,7 @@ export class FeedbackComponent {
 
     this.feedback.email=localStorage.getItem("email");
     this.feedback.rating='Four Star';
-  
+
 
     this.service.saveFeedbacks(this.feedback).subscribe(
       res => {

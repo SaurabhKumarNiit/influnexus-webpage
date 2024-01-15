@@ -1,0 +1,37 @@
+
+
+<div>
+
+    <div *ngIf="chatService.isPopupVisible1()" class="popup-overlay" (click)="hidePopup()">
+      <div class="popup" (click)="$event.stopPropagation()">
+        <p style="color: yellow;">Hi, I am Roboraah. How may I assist you?</p>
+      </div>
+    </div>
+  
+  
+    <a class="open-chat-btn" (click)="toggleChatWindow()"><img src="assets/chatbot.gif" width="65px" alt=""></a>
+  
+    <div class="chat-window" [ngClass]="{ 'open': isChatOpen }">
+      <div class="chat-header">
+        <span class="close-btn" (click)="closeChatWindow()"><img src="assets/close.png" alt="" width="30px"></span>
+        <p> <img src="assets/robot.png" alt="" width="30"> ROBORAAH</p>
+      </div>
+  
+      <div class="chat-body">
+        <div *ngFor="let message of conversation" class="chat-message" [ngClass]="{'user': message.isUser, 'bot': !message.isUser}">
+          <img *ngIf="message.isUser" src="assets/user.png" width="40px" alt="" class="avatar">
+          <p class="message-content">{{ message.content }}</p>
+          <img *ngIf="!message.isUser" src="assets/robot-assistant.png" width="40px" alt="" class="avatar">
+        </div>
+      </div>
+  
+      <div class="chat-input">
+        <input type="text" id="userMessage" [(ngModel)]="userMessage" (keyup.enter)="sendMessage()" placeholder="Enter a message..." />
+        <a style="padding: 10px;" (click)="sendMessage()"><img src="assets/send.png" alt="" width="40px"></a>
+      </div>
+    </div>
+  
+  
+  </div>
+  
+  
